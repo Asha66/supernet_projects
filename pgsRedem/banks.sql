@@ -1,0 +1,10 @@
+Field,Type,Null,Key,Default,Extra
+id,int,NO,PRI,NULL,auto_increment
+bank_name,varchar(45),YES,,NULL,
+bank_code,varchar(45),YES,,NULL,
+status,varchar(45),YES,,NULL,
+email,varchar(45),YES,,NULL,
+created_by,int,YES,MUL,NULL,
+created_at,varchar(45),YES,,NULL,
+updated_by,int,YES,MUL,NULL,
+updated_at,varchar(45),YES,,NULL,

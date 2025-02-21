@@ -1,0 +1,149 @@
+{
+    "version": "v1.2",
+    "language": "en",
+    "user_id": "vk18",
+    "cnps_application_transaction_id": "2587966703",
+    "transaction_start_date": "2022-11-04 11:50:14",
+    "description": "PPI payment",
+    "total_amount": "20",
+    "currency": "XOF",
+    "notification_url": "https://api.esb.cnps.free.ci/payment/v1/rest/payments/0202200120244/callback",
+    "return_url": "https://api.esb.cnps.free.ci/payment/v1/rest/payments/0202200120244/return",
+    "cancel_url": "https://api.esb.cnps.free.ci/payment/v1/rest/payments/0202200120244/cancel",
+    "benefit_type": "ASSUR-MAT/AT-MP/AF",
+    "payment_mode": "BANKTRANSFER",
+    "payment_method": "ECOBANK",
+    "Benefits": [
+        {
+            "cnps_transaction_id": "TRA0000000010047",
+            "cnps_entity_id": "1",
+            "entity_name": "COULIBALY AMADOU A",
+            "entity_phone": "XXXXXXXX",
+            "entity_email": "entity@domain.com",
+            "cnps_prestation_number": "0202200120244_20221",
+            "benefit_period": "31-12-2022",
+            "benefit_code": "1",
+            "benefit_label": "LABEL1",
+            "professional_category": "CATEGORY1",
+            "country_name": "CI",
+            "benefit_account_number": " CI0590100112000756700442",
+            "swift_code": " SCBLCIAB",
+            "bank_code": "523641",
+            "benefit_msisdn": "1234567890",
+            "benefit_amount": "10",
+            "prestation_period": "31-12-2022"
+        },
+        {
+            "cnps_transaction_id": "TRA0000000010046",
+            "cnps_entity_id": "1",
+            "entity_name": "COULIBALY AMADOU B",
+            "entity_phone": "YYYYYYY",
+            "entity_email": "entity@domain2.com",
+            "cnps_prestation_number": "0202200120244_20221",
+            "benefit_period": "18-04-2023",
+            "benefit_code": "2",
+            "benefit_label": "LABEL2",
+            "professional_category": "CATEGORY2",
+            "country_name": "CI",
+            "benefit_account_number": "CI0590100112000756700552",
+            "swift_code": " SCBLCIAB",
+            "bank_code": "523641",
+            "benefit_msisdn": "1234567123",
+            "benefit_amount": "10",
+            "prestation_period": "31-12-2024"
+        }
+    ]
+}
+
+
+
+
+getStatus()
+{
+    "version": "v1.2",
+    "language": "en",
+    "user_id": "12356556",
+    "cnps_application_transaction_id": "25879661067",
+    "benefits": [
+        {
+            "cnps_transaction_id": "TRA0000000130045"
+        }
+           ]
+}
+
+
+
+
+updateStatus()
+{
+    "version": "v1.2",
+    "language": "en",
+    "user_id": "vk18",
+    "cnps_application_transaction_id": "2587966703",
+    "cnps_application_transaction_status": "REDEM_ORDER_RECEIVED",
+    "payment_mode": "BANKTRANSFER",
+    "payment_method": "ECOBANK",
+    "benefits": [
+        {
+            "cnps_transaction_id": "TRA0000000010047",
+            "cnps_transaction_status": "REDEM_READY",
+            "bank_code": "523641",
+            "sign": "qfwa0JdWW3jX7H/SdBcy6EwNzierathjeo6axT5NEOHgefHzbEBGvooKc3E5qzI+uxrHDOlpe4col9xsDSvvfQ=="
+        },
+         {
+            "cnps_transaction_id": "TRA0000000010046",
+            "cnps_transaction_status": "REDEM_READY",
+            "bank_code": "523641",
+            "sign": "dlLkdBEQwBaAZOTexKIvRM+dFFtDswiSNgBxxaW9k4nn15SxejCoxW25hWgKpFBv7eFS4zOLwXGCwsNYqphL2A=="
+        }
+       
+    ]
+}
+
+
+
+
+
+{
+    "version": "v1.2",
+    "language": "en",
+    "user_id": "vk18",
+    "cnps_application_transaction_id": "2587966701",
+    "cnps_application_transaction_status": "REDEM_ORDER_RECEIVED",
+    "payment_mode": "BANKTRANSFER",
+    "payment_method": "ECOBANK",
+    "benefits": [
+        {
+            "cnps_transaction_id": "TRA0000000010043",
+            "cnps_transaction_status": "READM_READY_OFFLINE",
+            "bank_code": "523641",
+            "cheque_number":"5896566",
+            "sign": "GbFSK00EiNiz4eAIo49Ns9yU7lZXs6PLAxnsbmLMs3mQ66qIQMa5BjyfetBG4DS/bspW6hCERz48GeUxgNCfWQ=="
+        },
+        {
+                    "cnps_transaction_id": "TRA0000000010044",
+            "cnps_transaction_status": "READM_READY_OFFLINE",
+            "bank_code": "523641",
+            "cheque_number":"5896566",
+            "sign": "SDfrRMQYzRaoCI+jFU6MomXFrtVnzntBTnyWFLyHJu+FyzOcW2DnvJ9WrkViebaBMd0O8g1sg8ahzqCM6XhzZg=="
+        }
+            ]
+}
+
+
+
+
+
+READM_READY_OFFLINE
+
+
+ENUM('REDEM_ORDER_RECEIVED','REDEM_ORDER_SUCCESS','REDEM_ORDER_REJECT','REDEM_ORDER_CANCELLED')
+
+
+ENUM('REDEM_APPROVED','REDEM_DECLINED','REDEM_PENDING','REDEM_CANCELLED','REDEM_READY','READM_READY_OFFLINE')
+
+
+
+
+
+
