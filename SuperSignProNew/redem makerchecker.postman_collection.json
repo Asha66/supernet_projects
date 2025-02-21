@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "d793c491-0010-4f66-91e9-1a63669189c8",
+		"name": "redem makerchecker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19691749"
+	},
+	"item": [
+		{
+			"name": "getstatuscheck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"version\":\"v1.2\",\n   \"language\":\"en\",\n   \"user_id\":\"vk18\",\n   \"cnps_application_transaction_id\":\"2587966702\",\n   \"benefits\": [\n      {\n         \"cnps_transaction_id\":\" TRA0000000010045\"\n      },\n      {\n         \"cnps_transaction_id\":\" TRA0000000010046\"\n      }\n   ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/redeemgetStatusCheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"redeemgetStatusCheck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

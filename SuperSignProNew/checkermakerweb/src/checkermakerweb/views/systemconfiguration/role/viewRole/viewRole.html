@@ -1,0 +1,1106 @@
+<!--*Copyright (C) 2020-2030 Supernet Technologies India Private Limited. All rights reserved.
+All material appearing on this repository, folder, sub folder and file(s) (“Content/Code etc”) is protected by copyright laws and is the property of Supernet Technologies India Pvt Ltd. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell, offer it for sale, or use such content to construct any kind of database, you may not alter or remove any copyright or other notice from copies of contents on this file.
+Copying or storing any contents except as provided by Supernet Technologies India Pvt Ltd is expressly prohibited without prior written permission of the Supernet Technologies.
+For permission to use the content, please contact legal@supernet-india.com.
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SuperPay | Admin</title>
+<link rel="icon" href="/static/dist/img/wallet.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/static/dist/img/wallet.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="../../../Admin/static/css/main.css" rel="stylesheet" type="text/css">
+<!-- Bootstrap 5.0.2 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+<!-- FontAwesome 4.3.0 -->
+<link href="../../../Admin/static/bootstrap/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<!-- Ionicons 2.0.0 -->
+<link href="../../../Admin/static/bootstrap/fonts/ionicons.min.css" rel="stylesheet" type="text/css" />    
+<!-- Theme style -->
+<link href="../../../Admin/static/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/static/dist/css/style2.css" />
+<!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+<link href="../../../Admin/static/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+<script src="../../../Admin/static/dist/js/DisableRightClick.js"></script>
+<!--ajax-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.hidden{
+  display:none;
+}
+</style>
+</head>
+<body class="skin-superpay sidebar-mini">
+<div class="wrapper" style="background-color:white;">
+
+<!--navbar external link-->
+{{template "general/navbar/navbar.html" .}}
+<!--sidebar external link-->
+{{template "general/default/sidebar.html" .}}
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper content-bg-color">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h3 id="searchusers" class="m-0 text-color-white lang" key="VIEWROLE">View Role</h3>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                  <ol class="breadcrumb d-flex justify-content-end">
+                    <li class="breadcrumb-item"><a id="lihome" href="/Dashboard" class="lang" key="HOME">Home</a></li>
+                    <li id="lisearchusers" class="breadcrumb-item active lang" key="VIEWROLE">View Role</li>
+                  </ol>
+                  </div><!-- /.col -->
+                  </div><!-- /.row -->
+                  </div><!-- /.container-fluid -->
+                </div>
+                <!-- /.content-header -->
+                <form action="/Role/ViewRole" id="addUsersValidate" method="post">
+                  <!-- Main content -->
+                  <section class="content">
+                    <div class="container-fluid">
+                      <!-- Small boxes (Stat box) -->
+                      <div class="row">
+                        <div class="col-12">
+                          <!-- Default box -->
+                          <div class="card card-bg-color">
+                            <div class="card-header">
+<!--                              <h3  class="card-title text-color-white">User</h3>-->
+                            </div>
+                            <div class="card-body ">
+                              <div class="row">
+                                <div class="col-sm-4">
+                                  <!-- text input -->
+                                  <div class="form-group">
+                                    <label id="firstname" class="text-color-white required lang" key="NAME">Name</label>
+                                  <input type="text" class="form-control text-ph-backgroud-color lang" key="ENTERNAME" placeholder="Enter First Name" name="input_first_name" id="input_first_name" value="{{.Name}}" readonly />
+                                  </div>
+                                </div>
+                                
+                                
+                                <div class="col-sm-4">
+                                  <!-- text input -->
+                                  <div class="form-group">
+                                    <label id="firstname" class="text-color-white required lang" key="STATUS">Status</label>
+                                  <input type="text" class="form-control text-ph-backgroud-color lang" key="ENTERNAME" placeholder="Enter First Name" name="input_first_name" id="input_first_name" value="{{.Status}}" readonly />
+                                  </div>
+                                </div>
+                                
+                                <br>
+                                   <br>
+                                  
+                                 <br>
+                                   <br>
+                                  
+                                
+                                <table>
+                                    <tr>
+                                     <th style="background-color: #F9F6EE; border: 1px solid black;" class="lang" key="SLNO">Sr. No</th>
+                                      <th style="background-color: #F9F6EE; border: 1px solid black;" class="lang" key="MENU">Menu</th>
+                                       <th style="background-color: #F9F6EE; border: 1px solid black;" class="lang" key="ACTION">Action</th>
+                                       <th style="background-color: #F9F6EE; border: 1px solid black;" class="lang" key="SUBMENU">Submenu</th>
+                                      <th style="background-color: #F9F6EE; border: 1px solid black;"><span class="lang" key="SELECTALL">Select All</span> <input type="checkbox" id="selectall" name="selectall" disabled="disabled"></th>
+                                    </tr>
+                                  
+                                  <!--dashboard-->
+                                    <tr>
+                                  
+                                    <td>1</td>
+                                      <td><span class="lang" key="DASHBOARD">Dashboard</span>
+                                      <input class="checkboxall" type="checkbox" id="menu" name="menu" value="dashboard-menu" onclick="return false;" onkeydown="return false;"></td>
+                                      <td> <button id="hidedashboard" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                      <td class="dashboardele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right" style="padding-right:10px;" aria-hidden="true"></i>
+                                      <span  class="lang" key="RUNNINGBALANCE">Running Balance</span>
+                                      </td>
+                                      <td  class="dashboardele hidden">
+                                      <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="runningbalance-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                   
+                                    <!--sys user mgmt -->
+                                    <tr>
+                                      <td>2</td>
+                                      <td >
+                                      <span class="lang" key="UMGMT">System User Management</span>
+                                      <input class="checkboxall" type="checkbox" id="menu" value="sysusermanagement-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                   <td> <button id="hidesystuser" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td  class="systuserele hidden"  style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                      <span  class="lang" key="SEASYSUSER">Search System User</span>
+                                      </td>
+                                      <td  class="systuserele hidden">
+                                      <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchsysuser-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                   
+                                      <!--user mgmt -->
+                                    <tr>
+                                      <td>3</td>
+                                      <td >
+                                      <span class="lang" key="USERMGMT"> User Management</span>
+                                      <input class="checkboxall" type="checkbox" id="menu" value="userrmanagement-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    <td> <button id="hideuser" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                      <td class="userele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                     <span  class="lang" key="SEARCHUSER">Search User</span>
+                                      </td>
+                                      <td class="userele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchuser-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                  
+                                     <!--system configuiration -->
+                                    <tr>
+                                      <td rowspan="9">4</td>
+                                      <td rowspan="9" >
+                                    <span class="lang" key="SYSCONFIG">  System Configuration</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="systemmanagement-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td rowspan="9"><button id="hideconfig" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                    <span  class="lang" key="SETCHANNEL">Set Channel</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchchannel-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    
+                                     
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                     <span  class="lang" key="SETUTYPE">Set UserType</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchusertype-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                     <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="SETSTATUS">Set Status</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchstatus-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="SETCATEGORY"> Set Category</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                  <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchcategory-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="SETCHARGEITEM"> Set Charge Items</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                   <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchchargeitems-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                    <span  class="lang" key="SETACCTYPE">Set Account Type</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                     <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchaccounttype-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                    <span  class="lang" key="SETSERVICE">Set Service</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchservice-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                    <span  class="lang" key="SETPACKAGE">   Set Package</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchpackage-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="configele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                   <span  class="lang" key="SEARCHROLE">Search Role</span>
+                                      </td>
+                                      <td class="configele hidden">
+                                   <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchrole-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    
+                                     <!--risk assessment -->
+                                    <tr>
+                                      <td>5</td>
+                                      <td >
+                                  <span class="lang" key="RISKASSESSMENT">  Risk Assessment</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="riskassessment-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td><button id="hiderisk" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="riskele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="SETCHARGEMNEMONIC"> Set Charge Mnemonic</span>
+                                      </td>
+                                      <td class="riskele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchchargemnemonic-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                          </tr>
+                                      
+                                     <!--notification template -->
+                                    <tr>
+                                      <td>6</td>
+                                      <td >
+                                 <span class="lang" key="NOTIFICNMNG"> Notification Template Management</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="notificationtemplate-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td><button id="hidenotify" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="notifyele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                 <span  class="lang" key="SEARCHNOTFICATIONTEMPLATE"> Search Notification Template</span>
+                                      </td>
+                                      <td class="notifyele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchntmng-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                          </tr>
+                                      
+                                    <!--biller mgmt  -->
+                                    <tr>
+                                      <td>7</td>
+                                      <td >
+                             <span class="lang" key="BILLERMANG">     Biller Management</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="billermanagement-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td><button id="hidebiller" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="billerele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="SEARCHBILLER">Search Biller</span>
+                                      </td>
+                                      <td class="billerele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="searchbiller-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      </tr>
+                                      
+                                    <!--b2b admin -->
+                                    <tr>
+                                      <td rowspan="4">8</td>
+                                      <td rowspan="4" >
+                                <span class="lang" key="B2BADMIN"> B2B Administration</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="b2badministration-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td rowspan="4"><button id="hideb2b" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="b2bele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                <span  class="lang" key="DISTMAG"> Distributor Management</span>
+                                      </td>
+                                      <td class="b2bele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="distributormng-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      </tr>
+                                       <tr>
+                                       <td class="b2bele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                <span  class="lang" key="AGENTMAG">Agent Management</span>
+                                      </td>
+                                      <td class="b2bele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="agentmng-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                       </tr>
+                                       <tr>
+                                       <td class="b2bele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                 <span  class="lang" key="PARTNERMAG">Partner Management</span>
+                                      </td>
+                                      <td class="b2bele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="partnermng-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                       </tr>
+                                       <tr>
+                                       <td class="b2bele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                <span  class="lang" key="RISKMAG"> Risk Profiling</span>
+                                      </td>
+                                      <td class="b2bele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="b2briskprofiling-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                       </tr>
+                                      
+                                       <!--b2c mgmt  -->
+                                    <tr>
+                                      <td rowspan="2">9</td>
+                                      <td rowspan="2" >
+                                  <span class="lang" key="B2CCUSTMNGMT">B2C Customer Management</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="b2ccustomer-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td rowspan="2"><button id="hideb2c" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="b2cele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                     <span  class="lang" key="SEARCHCUSTOMER">Search Customer</span>
+                                      </td>
+                                      <td class="b2cele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="customer-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                         <tr>
+                                       <td class="b2cele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                   <span  class="lang" key="RISKMAG">  Risk Profiling</span>
+                                      </td>
+                                      <td class="b2cele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="b2criskprofiling-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                       </tr>
+                                      
+                                     <!--Accounting -->
+                                    <tr>
+                                      <td rowspan="4">10</td>
+                                      <td rowspan="4" >
+                               <span class="lang" key="ACCOUNTING">Accounting</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="accounting-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td rowspan="4"><button id="hideacc" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="accele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                <span  class="lang" key="SEARCHACCOUNT">Search Account</span>
+                                      </td>
+                                      <td class="accele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="account-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      </tr>
+                                       <tr>
+                                       <td class="accele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="POOLACCOUNTING">  System Accounting</span>
+                                      </td>
+                                      <td class="accele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="topup-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                       </tr>
+                                       <tr>
+                                       <td class="accele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                <span  class="lang" key="RISKPROFILING"> Distributor Accounting</span>
+                                      </td>
+                                      <td class="accele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="distributoracc-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                       </tr>
+                                       <tr>
+                                       <td class="accele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                               <span  class="lang" key="ACCOUNTRISKPROFILING"> Account Risk Profiling</span>
+                                      </td>
+                                      <td class="accele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="accountriskprofiling-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                       </tr>
+                                      
+                                    <!--settlement  -->
+                                    <tr>
+                                      <td>11</td>
+                                      <td>
+                               <span  class="lang" key="SETTLEMENT">Settlement</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="settlement-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td><button id="hidesettle" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="settleele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                               <span  class="lang" key="DIRECTSETTLEMENT">  Direct Settlement</span>
+                                      </td>
+                                      <td class="settleele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="directsettlement-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      </tr>
+                                      
+                                    <!--reports -->
+                                    <tr>
+                                      <td rowspan="9">12</td>
+                                      <td rowspan="9">
+                                     <span class="lang" key="REPORTS">Reports</span>
+                                         <input class="checkboxall" type="checkbox" id="menu" value="reports-menu" name="menu" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                      <td rowspan="9"><button id="hidereports" type="button" class="btn btn-primary lang" key="SHOW">Show</button></td>
+                                       <td class="reportsele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                 <span  class="lang" key="AUDITREPORT"> Audit Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="auditreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    
+                                     </tr>
+                                    <tr>
+                                      <td class="reportsele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                   <span  class="lang" key="TRANSREPORT">Transaction Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="transactionreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="reportsele hidden" style="padding-left:30px;">
+                                     <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                    <span  class="lang" key="ACCOUNTREPORT"> Accounts Transaction Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="accounttransactionreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="reportsele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                   <span  class="lang" key="DISTRIBUTORTRANSREPORT"> Distributor Transaction Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                  <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="distributortransactionreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="reportsele hidden lang" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="AGENTTRANSREPORT"> Agent Transaction Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                   <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="agenttransactionreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="reportsele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                  <span  class="lang" key="CHANNEREPORT"> Channel Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                     <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="channelreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="reportsele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                                   <span  class="lang" key="BILLERREPORT"> Biller Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="billerreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="reportsele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                             <span  class="lang" key="DSREPORT">  Settlement Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                    <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="directsettementreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="reportsele hidden" style="padding-left:30px;">
+                                      <i class="fa fa-long-arrow-right"  style="padding-right:10px;" aria-hidden="true"></i>
+                               <span  class="lang" key="PAYMENTREPORT">  Payment Institution Report</span>
+                                      </td>
+                                      <td class="reportsele hidden">
+                                   <input class="checkboxall" type="checkbox" id="submenu" name="submenu" value="payinsreport-active" onclick="return false;" onkeydown="return false;">
+                                      </td>
+                                    </tr>
+                          
+                                </table>
+                               
+                                
+                                
+                               
+                              </div>
+                            </div>
+                            <div class="card-footer" style="text-align: center;">
+                            <a href="/Role/UpdateRole/{{.Id}}"><button type="button" class="btn btn-primary lang" key="UPDATE">Update</button></a>
+                            <a href="/Role/SearchRole"><button type="button" class="btn btn-primary lang" key="BACK">Back</button></a>
+                          </div>
+                            <!-- /.card-footer-->
+                            <!-- /.card -->
+                          </div>
+                        </div>
+                        <!-- /.card -->
+                        <!-- /.row -->
+                        <!-- Main row -->
+                        <div class="row">
+                        </div>
+                        <!-- /.row (main row) -->
+                        </div><!-- /.container-fluid -->
+                        
+
+                       
+                      </section>
+                    </form>
+                    <!-- /.content -->
+                  </div>
+                  <!-- /.content-wrapper -->
+                  <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+<!--          <h4 class="color-indigo">Payments at your finger tips!!!</h4>-->
+  <small><b>Powered By <a href="http://www.proyava.com" target="_blank">Proyava Innovations</a></b></small> 
+        </div>
+        <small><strong>&copy; 2022 | </strong> All Rights Reserved.</small><br>
+      
+      </footer>
+<!-- Add the sidebar's background. This div must be placed
+immediately after the control sidebar -->
+<a href="#" class="scrollToTop"></a>
+
+<!-- jQuery 2.1.4 -->
+<script src="../../../Admin/static/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- jQuery UI 1.11.2 -->
+<script src="../../../Admin/static/dist/js/jquery-ui.min.js" type="text/javascript"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+<!-- Bootstrap 5.0.4 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+<!-- Slimscroll -->
+<script src="../../../Admin/static/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<!-- AdminLTE App -->
+<script src="../../../Admin/static/dist/js/app.min.js" type="text/javascript"></script>    
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!--script src="../../../Admin/static/dist/js/pages/dashboard.js" type="text/javascript"></script>    
+<!-- AdminLTE for demo purposes -->
+<script src="../../../Admin/static/dist/js/demo.js" type="text/javascript"></script>
+<!--language-->
+<script type="text/javascript" src="/static/dist/js/language.js"></script>
+<script>
+                document.getElementById("systemmanagement-menu").className += " menu-open";
+                document.getElementById("systemmanagement-active").className += " active";
+                document.getElementById("searchrole-active").className += " active";
+                </script>
+                <script>
+                  /** add active class and stay opened when selected */
+                  var url = document.getElementById('searchrole-active');
+                  const allLinks = document.querySelectorAll('.nav-item a');
+                  const currentLink = [...allLinks].filter(e => {
+                      return e.href == url;
+                  });
+              
+                  if (currentLink.length > 0) { //this filter because some links are not from menu
+                      currentLink[0].classList.add("active");
+                      currentLink[0].closest(".nav-treeview").style.display = "block";
+                      currentLink[0].closest(".has-treeview").classList.add("active");
+                  }
+                </script>
+                
+                <script>
+
+$(document).ready(function(){
+$("#selectall").click(function(){
+        if(this.checked){
+            $('.checkboxall').each(function(){
+                $(".checkboxall").prop('checked', true);
+            })
+        }else{
+            $('.checkboxall').each(function(){
+                $(".checkboxall").prop('checked', false);
+            })
+        }
+    });
+    
+ 
+});
+
+
+
+document.querySelector("#hidedashboard").addEventListener("click", function() {
+     document.getElementsByClassName("dashboardele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("dashboardele")[1].classList.toggle("hidden");
+});
+document.querySelector("#hidesystuser").addEventListener("click", function() {
+     document.getElementsByClassName("systuserele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("systuserele")[1].classList.toggle("hidden");
+});
+document.querySelector("#hideuser").addEventListener("click", function() {
+     document.getElementsByClassName("userele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("userele")[1].classList.toggle("hidden");
+});
+document.querySelector("#hideconfig").addEventListener("click", function() {
+     document.getElementsByClassName("configele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[1].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[2].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[3].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[4].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[5].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[6].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[7].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[8].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[9].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[10].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[11].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[12].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[13].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[14].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[15].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[16].classList.toggle("hidden");
+     document.getElementsByClassName("configele")[17].classList.toggle("hidden");
+});
+document.querySelector("#hiderisk").addEventListener("click", function() {
+     document.getElementsByClassName("riskele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("riskele")[1].classList.toggle("hidden");
+});
+document.querySelector("#hidenotify").addEventListener("click", function() {
+     document.getElementsByClassName("notifyele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("notifyele")[1].classList.toggle("hidden");
+});
+document.querySelector("#hidebiller").addEventListener("click", function() {
+     document.getElementsByClassName("billerele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("billerele")[1].classList.toggle("hidden");
+});
+document.querySelector("#hideb2b").addEventListener("click", function() {
+     document.getElementsByClassName("b2bele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("b2bele")[1].classList.toggle("hidden");
+     document.getElementsByClassName("b2bele")[2].classList.toggle("hidden");
+    document.getElementsByClassName("b2bele")[3].classList.toggle("hidden");
+     document.getElementsByClassName("b2bele")[4].classList.toggle("hidden");
+    document.getElementsByClassName("b2bele")[5].classList.toggle("hidden");
+     document.getElementsByClassName("b2bele")[6].classList.toggle("hidden");
+    document.getElementsByClassName("b2bele")[7].classList.toggle("hidden");
+    
+});
+document.querySelector("#hideb2c").addEventListener("click", function() {
+     document.getElementsByClassName("b2cele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("b2cele")[1].classList.toggle("hidden");
+    document.getElementsByClassName("b2cele")[2].classList.toggle("hidden");
+     document.getElementsByClassName("b2cele")[3].classList.toggle("hidden");
+});
+document.querySelector("#hideacc").addEventListener("click", function() {
+     document.getElementsByClassName("accele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("accele")[1].classList.toggle("hidden");
+     document.getElementsByClassName("accele")[2].classList.toggle("hidden");
+    document.getElementsByClassName("accele")[3].classList.toggle("hidden");
+     document.getElementsByClassName("accele")[4].classList.toggle("hidden");
+    document.getElementsByClassName("accele")[5].classList.toggle("hidden");
+     document.getElementsByClassName("accele")[6].classList.toggle("hidden");
+    document.getElementsByClassName("accele")[7].classList.toggle("hidden");
+    
+});
+document.querySelector("#hidesettle").addEventListener("click", function() {
+     document.getElementsByClassName("settleele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("settleele")[1].classList.toggle("hidden");
+});
+document.querySelector("#hidereports").addEventListener("click", function() {
+     document.getElementsByClassName("reportsele")[0].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[1].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[2].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[3].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[4].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[5].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[6].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[7].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[8].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[9].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[10].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[11].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[12].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[13].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[14].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[15].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[16].classList.toggle("hidden");
+     document.getElementsByClassName("reportsele")[17].classList.toggle("hidden");
+});
+
+var D = $("input[type='checkbox'][value='dashboard-menu']");
+var D1 = $("input[type='checkbox'][value='runningbalance-active']");
+D.change(function(){
+  D1.prop('checked',this.checked);
+});
+
+D1.change(function() {
+if(this.checked == true) {
+ D.prop('checked',true);  
+  }
+});
+
+
+var SUM = $("input[type='checkbox'][value='sysusermanagement-menu']");
+var SUM1 = $("input[type='checkbox'][value='searchsysuser-active']");
+SUM.change(function(){
+  SUM1.prop('checked',this.checked);
+});
+
+SUM1.change(function() {
+if(this.checked == true) {
+ SUM.prop('checked',true);  
+  }
+});
+
+var UM = $("input[type='checkbox'][value='userrmanagement-menu']");
+var UM1 = $("input[type='checkbox'][value='searchuser-active']");
+UM.change(function(){
+  UM1.prop('checked',this.checked);
+});
+
+UM1.change(function() {
+if(this.checked == true) {
+ UM.prop('checked',true);  
+  }
+});
+
+var SC = $("input[type='checkbox'][value='systemmanagement-menu']");
+var SC1 = $("input[type='checkbox'][value='searchchannel-active']");
+var SC2 = $("input[type='checkbox'][value='searchusertype-active']");
+var SC3 = $("input[type='checkbox'][value='searchstatus-active']");
+var SC4 = $("input[type='checkbox'][value='searchcategory-active']");
+var SC5 = $("input[type='checkbox'][value='searchchargeitems-active']");
+var SC6 = $("input[type='checkbox'][value='searchaccounttype-active']");
+var SC7 = $("input[type='checkbox'][value='searchservice-active']");
+var SC8 = $("input[type='checkbox'][value='searchpackage-active']");
+var SC9 = $("input[type='checkbox'][value='searchrole-active']");
+SC.change(function(){
+  SC1.prop('checked',this.checked);
+   SC2.prop('checked',this.checked);
+   SC3.prop('checked',this.checked);
+   SC4.prop('checked',this.checked);
+   SC5.prop('checked',this.checked);
+   SC6.prop('checked',this.checked);
+   SC7.prop('checked',this.checked);
+   SC8.prop('checked',this.checked);
+   SC9.prop('checked',this.checked);
+   
+});
+
+SC1.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC2.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC3.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC4.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC5.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC6.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC7.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC8.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+SC9.change(function() {
+if(this.checked == true) {
+ SC.prop('checked',true);  
+  }
+});
+  
+
+
+var RA = $("input[type='checkbox'][value='riskassessment-menu']");
+var RA1 = $("input[type='checkbox'][value='searchchargemnemonic-active']");
+RA.change(function(){
+  RA1.prop('checked',this.checked);
+});
+
+RA1.change(function() {
+if(this.checked == true) {
+ RA.prop('checked',true);  
+  }
+});
+
+var NTM = $("input[type='checkbox'][value='notificationtemplate-menu']");
+var NTM1 = $("input[type='checkbox'][value='searchntmng-active']");
+NTM.change(function(){
+  NTM1.prop('checked',this.checked);
+});
+
+NTM1.change(function() {
+if(this.checked == true) {
+ NTM.prop('checked',true);  
+  }
+});
+
+var BM = $("input[type='checkbox'][value='billermanagement-menu']");
+var BM1 = $("input[type='checkbox'][value='searchbiller-active']");
+BM.change(function(){
+  BM1.prop('checked',this.checked);
+});
+
+BM1.change(function() {
+if(this.checked == true) {
+ BM.prop('checked',true);  
+  }
+});
+
+var B2B = $("input[type='checkbox'][value='b2badministration-menu']");
+var B2B1 = $("input[type='checkbox'][value='distributormng-active']");
+var B2B2 = $("input[type='checkbox'][value='agentmng-active']");
+var B2B3 = $("input[type='checkbox'][value='partnermng-active']");
+var B2B4 = $("input[type='checkbox'][value='b2briskprofiling-active']");
+B2B.change(function(){
+  B2B1.prop('checked',this.checked);
+   B2B2.prop('checked',this.checked);
+   B2B3.prop('checked',this.checked);
+   B2B4.prop('checked',this.checked);
+});
+
+B2B1.change(function() {
+if(this.checked == true) {
+ B2B.prop('checked',true);  
+  }
+});
+B2B2.change(function() {
+if(this.checked == true) {
+ B2B.prop('checked',true);  
+  }
+});
+B2B3.change(function() {
+if(this.checked == true) {
+ B2B.prop('checked',true);  
+  }
+});
+B2B4.change(function() {
+if(this.checked == true) {
+ B2B.prop('checked',true);  
+  }
+});
+
+var B2C = $("input[type='checkbox'][value='b2ccustomer-menu']");
+var B2C1 = $("input[type='checkbox'][value='customer-active']");
+var B2C2 = $("input[type='checkbox'][value='b2criskprofiling-active']");
+B2C.change(function(){
+  B2C1.prop('checked',this.checked);
+  B2C2.prop('checked',this.checked);
+});
+
+B2C1.change(function() {
+if(this.checked == true) {
+ B2C.prop('checked',true);  
+  }
+});
+B2C2.change(function() {
+if(this.checked == true) {
+ B2C.prop('checked',true);  
+  }
+});
+
+var ACC = $("input[type='checkbox'][value='accounting-menu']");
+var ACC1 = $("input[type='checkbox'][value='account-active']");
+var ACC2 = $("input[type='checkbox'][value='topup-active']");
+var ACC3 = $("input[type='checkbox'][value='distributoracc-active']");
+var ACC4 = $("input[type='checkbox'][value='accountriskprofiling-active']");
+ACC.change(function(){
+  ACC1.prop('checked',this.checked);
+   ACC2.prop('checked',this.checked);
+   ACC3.prop('checked',this.checked);
+   ACC4.prop('checked',this.checked);
+});
+
+ACC1.change(function() {
+if(this.checked == true) {
+ ACC.prop('checked',true);  
+  }
+});
+ACC2.change(function() {
+if(this.checked == true) {
+ ACC.prop('checked',true);  
+  }
+});
+ACC3.change(function() {
+if(this.checked == true) {
+ ACC.prop('checked',true);  
+  }
+});
+ACC4.change(function() {
+if(this.checked == true) {
+ ACC.prop('checked',true);  
+  }
+});
+
+var STMT = $("input[type='checkbox'][value='settlement-menu']");
+var STMT1 = $("input[type='checkbox'][value='directsettlement-active']");
+STMT.change(function(){
+  STMT1.prop('checked',this.checked);
+});
+
+STMT1.change(function() {
+if(this.checked == true) {
+ STMT.prop('checked',true);  
+  }
+});
+
+var reports = $("input[type='checkbox'][value='reports-menu']");
+var R1 = $("input[type='checkbox'][value='auditreport-active']");
+var R2 = $("input[type='checkbox'][value='transactionreport-active']");
+var R3 = $("input[type='checkbox'][value='accounttransactionreport-active']");
+var R4 = $("input[type='checkbox'][value='distributortransactionreport-active']");
+var R5 = $("input[type='checkbox'][value='agenttransactionreport-active']");
+var R6 = $("input[type='checkbox'][value='channelreport-active']");
+var R7 = $("input[type='checkbox'][value='billerreport-active']");
+var R8 = $("input[type='checkbox'][value='directsettementreport-active']");
+var R9 = $("input[type='checkbox'][value='payinsreport-active']");
+reports.change(function(){
+  R1.prop('checked',this.checked);
+  R2.prop('checked',this.checked);
+  R3.prop('checked',this.checked);
+  R4.prop('checked',this.checked);
+  R5.prop('checked',this.checked);
+  R6.prop('checked',this.checked);
+  R7.prop('checked',this.checked);
+  R8.prop('checked',this.checked);
+  R9.prop('checked',this.checked);
+});
+
+
+R1.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+
+R2.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+
+R3.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+R4.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+R5.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+R6.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+R7.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+R8.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+R9.change(function() {
+if(this.checked == true) {
+ reports.prop('checked',true);  
+  }
+});
+
+
+</script>
+<script>
+function myFunc() {
+let arr = [];
+let checkboxes = document.querySelectorAll("input[id='menu']:checked");
+for (let i = 0; i < checkboxes.length; i++) {
+arr.push(checkboxes[i].value)
+}
+// Converted array to string & alert
+//alert(arr.toString());
+document.getElementById("menuArr").value = arr
+//console.log(arr.toString());
+
+
+let subarr = [];
+let checkboxes1 = document.querySelectorAll("input[id='submenu']:checked");
+for (let i = 0; i < checkboxes1.length; i++) {
+subarr.push(checkboxes1[i].value)
+}
+// Converted array to string & alert
+//alert(subarr.toString());
+document.getElementById("subArr").value = subarr
+//console.log(subarr.toString());
+}
+
+
+ $(document).ready(function() { 
+  var menuarray = {{.Menuarray}};
+   var submenuarray = {{.Submenuarray}};
+  
+    
+    var str1 = menuarray;
+    //alert(str);
+    var arrayString= str1.join(); 
+    var str = arrayString.replace(/,/g," "); 
+
+    var temp = new Array();
+    temp = str.toString().split(' ');
+    //console.log("temp",temp);
+    for (i=0; i!=temp.length;i++) {
+        var checkbox = $("input[type='checkbox'][value='"+temp[i]+"']");
+        checkbox.attr("checked","checked");
+    }
+    
+    var str2 = submenuarray;
+    //alert(str);
+    var arrayString1= str2.join(); 
+    var str3 = arrayString1.replace(/,/g," "); 
+
+    var temp1 = new Array();
+    temp1 = str3.toString().split(' ');
+    console.log("temp1",temp1);
+    for (i=0; i!=temp1.length;i++) {
+        var checkbox = $("input[type='checkbox'][value='"+temp1[i]+"']");
+        checkbox.attr("checked","checked");
+    }
+});
+</script>
+
+</body>
+</html>

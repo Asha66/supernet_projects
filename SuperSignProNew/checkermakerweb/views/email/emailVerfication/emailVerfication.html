@@ -1,0 +1,481 @@
+<!--*Copyright (C) 2020-2030 Supernet Technologies India Private Limited. All rights reserved.
+All material appearing on this repository, folder, sub folder and file(s) (“Content/Code etc”) is protected by copyright laws and is the property of Supernet Technologies India Pvt Ltd. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell, offer it for sale, or use such content to construct any kind of database, you may not alter or remove any copyright or other notice from copies of contents on this file.
+Copying or storing any contents except as provided by Supernet Technologies India Pvt Ltd is expressly prohibited without prior written permission of the Supernet Technologies.
+For permission to use the content, please contact legal@supernet-india.com.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SuperPay Admin | Register</title>
+<link rel="shortcut icon" href="/static/dist/img/wallet.png" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="title" content="tafikapay.com – Banking at your Finger Tips | Digital &amp; Utility Payment, Airtime, Electricity, Councils, Money Transfer, Agency Banking, Branchless Banking, Digital Banking &amp; more Online !">
+<meta name="description" content="tafikapay.com - Make Instant Digital &amp; Utility Payment, Buy Airtime, Pay Electricity and TV Bills &amp; fun-filled! Free Payment Gateway">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="../../../Admin/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../../../Admin/static/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../../Admin/static/css/font-awesome.min.css">
+<link href="../../../Admin/static/css/style.css" rel="stylesheet" type="text/css">
+<link href="../../../Admin/static/css/pages/signin.css" rel="stylesheet" type="text/css">
+<link href="../../../Admin/static/css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../static/plugins/duDialog-master/duDialog.css">
+
+<style>
+.centr
+{
+text-align: center;
+}
+
+@media only screen and (max-device-width: 1200px) {
+.carcarcar{
+display:none;        }
+#myCarousel{
+display:none;        }
+
+
+#loginbox{
+float:none!important;
+}
+
+}
+.staticFooter {
+overflow: hidden;
+}
+
+.staticFooter ul {
+margin: 20px 0;
+overflow: hidden;
+color: #828282;
+}
+
+.staticFooter ul li {
+padding: 0 0px;
+width: auto;       
+text-align: center;
+margin-top: 5px;
+list-style: none;
+}
+.fa-stack{
+
+display: block;
+
+margin : 0 auto 0 auto;
+margin-top: 25px!important;
+font-weight: 600;       
+}
+
+
+.staticFooterHeading {
+font-size: 14px;
+display: block;
+font-weight: 600;
+text-align: center;
+padding: 10px 0;
+}
+
+.ulbox{
+height:182px!important;
+width:auto!important;
+margin-left: auto!important;
+}
+#loginbox
+{
+
+}
+#mainlangdiv{
+  position: relative; 
+/  width: 60px;        /
+        
+        
+}
+#langdiv{
+        
+display:flex;
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+}
+</style>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<!-- <div id="loader-wrapper">
+<div id="loader"></div>
+<div id="loader2"></div>
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div>
+</div> -->
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+<!--language change-->
+
+<div id="mainlangdiv">
+      <div id="langdiv">
+        <img style="margin:0px!important;padding-right:10px;" src="https://img.icons8.com/material-outlined/24/000000/globe--v2.png"/>  
+          <select style="margin:0px!important;font-weight:bold;" id="translate">
+            <option id="en-gb" value="english">English</option>
+            <option id="zh-tw" value="french">French</option>               
+          </select>   
+      </div>
+    </div>
+<div class="container">
+    <img src="../../../Admin/static/img/superpay.png" class="product-logo">
+</div>
+</nav>
+<div class="main" style="margin-top: 5em;">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="account-container slideDown effect7"  id="loginbox">
+<div class="content clearfix">
+                <form action="/Email/EmailVerification/{{.TxnId}}" autocomplete="off" id="LoginForm" method="post" name="LoginForm">
+<h2 class="vibcenter text-primary lang" key="">Email Verification </h2><hr><span style="color: red; font-size:12px;">
+
+</span>
+<br/>
+<div class="login-fields">
+
+<!--<div class="login-fields">
+<p class="lang" key="PPRE" id="usernameMessage">
+Please provide your registered email
+</p>
+</div>
+<div class="field fade-in one">
+<label for="email">Email</label>
+<input type="text" id="username" name="username" value="" placeholder="User Identity" class="login username-field lang" key="USERIDENTITY" />
+</div>-->
+<div class="field fade-in two">
+<p class="lang" key="PPPASS" id="passwordMessage">  
+Please provide your password
+</p>
+<label for="password">Password</label>
+<input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field lang" key="PASSWORD"  maxLength="16" />
+</div>
+<p class="lang" key="" id="usernameMessage">
+Please provide your Confirm Password
+</p>
+
+<div class="field fade-in one">
+<label for="password">Confirm Password</label>
+<input type="password" id="confirmpassword" name="confirmpassword" value="" placeholder="Password" class="login password-field lang" key="PASSWORD" maxLength="16"/>
+</div>
+ <!--div class="field fade-in two">
+    <div class="g-recaptcha" data-sitekey="6LewlSYTAAAAAOpSOgF80eMGQrHwClRKJawKxjUv"></div>
+</div--> 
+</div>
+<div class="login-actions fade-in three">
+<button id="Submit" class="button btn btn-primary btn-large btn-custom lang" value="signin" key="SUBMIT" style="width: 100%"><b>Submit</b></button>
+</div>
+<!--</form><span class="forgot" style="float:right;"><a class="lang" key="FORGOTPASS" href="/ForgotPassword" > Forgot password ?</a></span>-->
+</div>
+</div>
+
+</div>
+</div>
+<div class="container">
+		
+		
+		
+                                      <div class="row">
+                                            <div class="span12">
+                    <div class="widget fade-in three ">
+                         <div class="widget-header widget-blue"><i class="widgeticon fa fa-lock "></i>
+                            <h3 class="lang" key="SECUINFO"><b>SECURITY INFORMATION</b></h3></div>
+                        <div class="widget-content" style="text-align: justify; text-justify: inter-word;">
+                           
+                               <p>
+                                <ul>
+                                    <li class="lang" key="D1">Before logging in, please ensure that the URL address on the address bar of your internet browser starts with https://www.superpay.com.</li>
+                                    <li class="lang" key="D2">Never provide your User ID or password to any one on phone or in response to a mail.</li>
+                                    <li class="lang" key="D3">Change your Login and Transaction Password periodically</li>
+                                    
+                                    <li class="lang" key="D4">Do not enter login or other sensitive information in any pop up window.</li>
+                                    <li class="lang" key="D5">Verify the site's security certificate by clicking on the padlock icon of your internet browser.</li>
+                                </ul>
+                            </p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+</div>
+            
+</div>
+</div>
+</div>
+<div class="footer">
+            <div class="footer-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="span3">
+                            <img src="../../../Admin/static/img/superpay.png" class="company-logo"><br><br>
+                        </div>
+                       <div class="span99">
+                          <p class="lang " key="CS" style="font-size:15px;font-weight:40px;color:white;">Customer Service</p>
+                          <hr class="custom-hr">                            
+                        </div>
+                        <div class="span99">
+                          <p class="lang" key="CA" style="font-size:15px;font-weight:40px;color:white;">Company Address</p>
+                          <hr class="custom-hr">                            
+                        </div>
+                        <div class="span99">
+                          <p class="lang" key="ARR" style="font-size:15px;font-weight:40px;color:white;">© 2022 | All Rights Reserved</p>
+                          <hr class="custom-hr">
+                        </div>
+                </div>
+            </div>
+        </div>
+<script src="../../../Admin/static/js/jquery-1.7.2.min.js"></script>
+<script src="../../../Admin/static/js/bootstrap.js"></script>
+<script src="../../../Admin/static/js/DisableRightClick.js"></script>
+<script type="text/javascript" src="../../static/plugins/duDialog-master/duDialog.js"></script>
+
+ <script type="text/javascript">
+              var data = {{.DisplayMessage}};
+              if (data != ""){
+              new duDialog('', data);
+              }
+              </script>
+<script>
+
+
+
+
+$(document).ready(function($) {
+var ver = getInternetExplorerVersion();
+
+if ( ver > -1 && ver < 9.0 )
+{           
+upgradeBrowser();
+}
+
+if ({{.DisplayMessage}} != "") 
+{
+loadFormServer();
+}
+$(function() {
+$('.carousel').carousel({
+interval: 5000
+});
+$('.carousel-control.right').trigger('click');
+});
+$("a.btn-navbar").hide();
+$("#username").val("");
+$("#password").val("");
+$("#username").focus();
+var allInputs = $( ":input" );
+allInputs.bind("cut copy paste", function(e){ 
+
+e.preventDefault();
+});
+setTimeout(function() {
+$('body').addClass('loaded');
+$('h1').css('color', '#222222');
+}, 1500);
+//Check to see if the window is top if not then display button
+$(window).scroll(function() {
+if ($(this).scrollTop() > 100) {
+$('.scrollToTop').fadeIn();
+} else {
+$('.scrollToTop').fadeOut();
+}
+});
+
+//Click event to scroll to top
+$('.scrollToTop').click(function() {
+$('html, body').animate({
+scrollTop: 0
+}, 800);
+return false;
+});
+
+});
+$('#Register').click(function() {
+window.location.href = 'signup.html';
+return false;
+});
+
+$('#Submit').click(function() {
+	var username = $("#username").val().trim();
+if ($.trim($('#username').val()) == "") {              
+$("#usernameMessage").html("Please enter your registered email address").css('color', 'red');
+return false;
+}
+if($("#username").val()!=""){
+        var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+            if (!filter.test($("#username").val())) {
+                $("#usernameMessage").html("<sup>*</sup> Enter your registered email address").css('color', 'red').show();
+                $("#username").focus();
+                return false;
+            }
+        }
+$("#username").val(username);
+var password= $("#password").val().trim();
+if ($.trim($('#password').val()) == "") {
+$("#passwordMessage").html("Please enter your password").css('color', 'red');
+return false;
+}
+
+if (!(/^.{6,16}$/.test($('#password').val()))) {
+$("#passwordMessage").html("Please enter valid password").css('color', 'red');
+return false;
+}
+$("#password").val(password);
+});
+
+function openTwitterPage() {
+var win = window.open('https://twitter.com/ndasendaservice', '_blank');
+win.focus();
+}
+
+function openFacebookPage() {
+var win = window.open('https://www.facebook.com/ndasendaServiceDeliveryPlatform', '_blank');
+win.focus();
+}
+
+function openAgentApplicationForm() {
+var win = window.open('../../../static/agentApplicationForm/AgentApplicationForm.pdf', '_blank');
+win.focus();
+}
+
+function openTeknospireWebsite() {
+var win = window.open('http://www.teknospire.com/', '_blank');
+win.focus();
+}
+function loadFormServer()
+{
+var username = {{.FormData.Uname}};
+var password = {{.FormData.Pass}};
+}
+/**
+* Returns the version of Internet Explorer or a -1
+* (indicating the use of another browser).
+*/
+function getInternetExplorerVersion()
+{
+var rv = -1; // Return value assumes failure.
+
+if (navigator.appName == 'Microsoft Internet Explorer')
+{
+var ua = navigator.userAgent;
+var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+if (re.exec(ua) != null)
+rv = parseFloat( RegExp.$1 );
+}
+return rv;
+}
+
+
+function upgradeBrowser()
+{
+window.parent.location.href = "http://outdatedbrowser.com/en"; 
+}
+</script>
+<a href="#" class="scrollToTop"></a>
+<!--language-->
+<script type="text/javascript" src="/static/dist/js/language.js"></script>
+
+<script>
+var arrLang = {
+  "english": {
+    
+    //	--- login page ---
+	
+    "ADMINLIN": "ADMIN LOGIN",
+    "SIGNIN": "Sign In",
+    "FORGOTPASS": "Forgot password ?",
+    "PPRE": "Please provide your registered email",
+    "PPPASS": " Please provide your password",
+    "UI": "Username",
+    "PASSWORD": "Password",
+    "SECUINFO": "SECURITY INFORMATION",
+    "D1": "Before logging in, please ensure that the URL address on the address bar of your internet browser starts with https://www.superpay.com.",
+    "D2": "Never provide your User ID or password to any one on phone or in response to a mail.",
+    "D3": "Change your Login and Transaction Password periodically.",
+    "D4": "Do not enter login or other sensitive information in any pop up window.",
+    "D5": "Verify the site's security certificate by clicking on the padlock icon of your internet browser.",
+    "CS": "Customer Service",
+    "CA": "Company Address",
+    "ARR": "© 2022 | All Rights Reserved",
+    
+    "USERIDENTITY": "User Identity",
+    
+    
+    
+    
+    
+     },
+  "french": {
+    
+    //	---login page-----
+	
+	
+	
+    "ADMINLIN": "CONNEXION ADMINISTRATEUR",
+    "SIGNIN": "S'identifier",
+    "FORGOTPASS": "Mot de passe oublié ?",
+    "PPRE": "Veuillez fournir votre e-mail enregistré",
+    "PPPASS": " Veuillez fournir votre mot de passe",
+    "UI": "Nom d'utilisateur",
+    "PASSWORD": "Mot de passe",
+    "SECUINFO": "INFORMATION DE SÉCURITÉ",
+    "D1": "Avant de vous connecter, veuillez vous assurer que l'adresse URL dans la barre d'adresse de votre navigateur Internet commence par https://www.superpay.com.",
+    "D2": "Ne donnez jamais votre nom d'utilisateur ou votre mot de passe à qui que ce soit au téléphone ou en réponse à un courrier.",
+    "D3": "Modifiez régulièrement votre identifiant et votre mot de passe de transaction.",
+    "D4": "N'entrez pas de connexion ou d'autres informations sensibles dans une fenêtre contextuelle.",
+    "D5": "Vérifiez le certificat de sécurité du site en cliquant sur l'icône du cadenas de votre navigateur internet.",
+    "CS": "Service Clients",
+    "CA": "Adresse de la société",
+    "ARR": "© 2022 | Tous les droits sont réservés",
+    
+    "USERIDENTITY": "Identité de l'utilisateur",
+    
+    }
+    };
+    
+    // The default language is English
+var lang = "english";
+// Check for localStorage support
+if('localStorage' in window){
+   
+   var usrLang = localStorage.getItem('uiLang');
+   if(usrLang) {
+       lang = usrLang
+   }
+
+}
+    
+
+
+//console.log(lang);
+
+        $(document).ready(function() {
+
+          $(".lang").each(function(index, element) {
+            $(this).text(arrLang[lang][$(this).attr("key")]);
+            $(this).prop("placeholder",arrLang[lang][$(this).attr("key")]);
+          });
+        });
+
+        // get/set the selected language
+    $("#translate").change(function() { 
+        var lang = $('#translate :selected').val();
+        console.log("lang",lang);
+          // update localStorage key
+          if('localStorage' in window){
+               localStorage.setItem('uiLang', lang);
+//               console.log( localStorage.getItem('uiLang') );
+          }
+          $(".lang").each(function(index, element) {
+            $(this).text(arrLang[lang][$(this).attr("key")]);
+            $(this).prop("placeholder",arrLang[lang][$(this).attr("key")]);
+          });
+   });
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2" pages="2">
+  <diagram name="UpdatedMackerChecker" id="0BywBDW4FYNiExBOIdCw">
+    <mxGraphModel dx="880" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-0" />
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-1" parent="hVWf2E9da-X2Bw6i4vYb-0" />
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-2" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontColor=#333333;fillColor=#f5f5f5;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="80" y="1701" width="550" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-3" value="CNPS Maker &amp;amp; Checker Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;fontColor=#0000FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="200" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-4" value="PGS_REDEEM Applicatoin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-5" value="Financial Partner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#FF0000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="520" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-6" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;" parent="hVWf2E9da-X2Bw6i4vYb-1" target="hVWf2E9da-X2Bw6i4vYb-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="2110" as="sourcePoint" />
+            <mxPoint x="120" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-7" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;" parent="hVWf2E9da-X2Bw6i4vYb-1" target="hVWf2E9da-X2Bw6i4vYb-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="2120" as="sourcePoint" />
+            <mxPoint x="590" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-8" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="152" as="sourcePoint" />
+            <mxPoint x="260" y="152" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-9" value="Redeem Order Request &lt;br&gt;(batchId, payment mode, payment method, List of Payment instructions)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="103" y="106" width="410" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-10" value="Validate statements with Business Rule and Sign" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="347" y="360" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-12" value="status = REDEEM_INIT / REDEM_ERROR&lt;br&gt;for each of the payment instructions" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="295" y="396" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-13" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="465" as="sourcePoint" />
+            <mxPoint x="420" y="465.2" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-14" value="Redeem Order Response&lt;br&gt;&amp;nbsp;(batchId,, status for each payment instructions)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="264" y="421" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-15" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;fontColor=#3333FF;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="254" y="777" as="sourcePoint" />
+            <mxPoint x="414" y="777" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-16" value="Redeem Get Status Request &lt;br&gt;(batchId, list of payment instruction)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="103" y="649" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-17" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;fontColor=#3333FF;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="254" y="820" as="sourcePoint" />
+            <mxPoint x="414" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-18" value="Redeem Get Status Response &lt;br&gt;(batchId,&amp;nbsp; status for each payment instructions in the batch)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="253" y="780" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-19" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="101" y="1511" as="sourcePoint" />
+            <mxPoint x="248" y="1511" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-20" value="Redeem Process Request (batchId,&amp;nbsp; &amp;nbsp;&lt;br&gt;CNPSredirectURL, CNPSCancelURL, CNPSNotifyURL)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="104" y="1470" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-21" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="1005" as="sourcePoint" />
+            <mxPoint x="260" y="1005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-22" value="Redeem Update Status Request ( batchId, list of payment instruction, &lt;br&gt;with status = REDEM_READY / REDEM_CACNEL / REDEM_ISSUED_OFFLINE )" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="100" y="957" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-23" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="1140" as="sourcePoint" />
+            <mxPoint x="260" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-24" value="Redeem Update Status Response (&lt;br&gt;batchId, status for each payment instructions in the batch, error_code = SUCCESS)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="103" y="1102" width="470" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-25" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;entryX=0.528;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" source="NO0o2W1C6Uo2LGVGYTRS-3" target="hVWf2E9da-X2Bw6i4vYb-26" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="402" y="1692" as="sourcePoint" />
+            <mxPoint x="562" y="1692" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L0wweh6KqyIONVSvjlXH-0" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="hVWf2E9da-X2Bw6i4vYb-25" vertex="1" connectable="0">
+          <mxGeometry x="-0.0424" y="2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-26" value="Payment Request (batchId, PGSRedirectUrl PGSCancelURL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FF0000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="397" y="1604" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-27" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="102" y="1731" as="sourcePoint" />
+            <mxPoint x="581.5" y="1731" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-28" value="Bank Authorization Page (batchId, amount) page redirection etc." style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FF0000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="112" y="1700" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-29" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;startArrow=none;startFill=0;endFill=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="102" y="1763" as="sourcePoint" />
+            <mxPoint x="580.5" y="1764" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-30" value="Bank Authorization Complete (specific authorization mechanism)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FF0000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="114" y="1736" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-31" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;exitX=0.03;exitY=1.04;exitDx=0;exitDy=0;exitPerimeter=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" source="hVWf2E9da-X2Bw6i4vYb-32" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="1810" as="sourcePoint" />
+            <mxPoint x="584" y="1810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-32" value="PGS RedictURL ( status, amount, bank_reference_id)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FF0000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="397" y="1780" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-33" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;exitX=-0.002;exitY=1.122;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.935;entryY=1.084;entryDx=0;entryDy=0;entryPerimeter=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" source="hVWf2E9da-X2Bw6i4vYb-34" target="hVWf2E9da-X2Bw6i4vYb-34" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="221" y="1863" as="sourcePoint" />
+            <mxPoint x="381" y="1863" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-34" value="CNPS RedictURL ( status, amount, bank_reference_id)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#33001A;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="104" y="1829" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-35" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="404" y="1889" as="sourcePoint" />
+            <mxPoint x="562" y="1889" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-36" value="PGS NotifyURL ( status, amount, bank_reference_id)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#FF0000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="400" y="1850" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-37" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="103" y="2030" as="sourcePoint" />
+            <mxPoint x="241" y="2030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-38" value="CNPS NotifyURL ( status, amount, bank_reference_id)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="235" y="1960" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-39" value="status = REDEEM_APPROVED / REDEEM_PENDING / REDEEM_DECLINED based on Bank response for each transactions" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="288.5" y="1900" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-40" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" target="hVWf2E9da-X2Bw6i4vYb-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="2120" as="sourcePoint" />
+            <mxPoint x="260" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-41" value="CNPS Payment Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-42" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="2120" as="sourcePoint" />
+            <mxPoint x="99.71000000000001" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-44" value="CNPS Application" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="110" y="10" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-45" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000099;fontColor=#0000FF;strokeColor=none;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="850" y="1590" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-46" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF0000;fontColor=#0000FF;strokeColor=none;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="850" y="1620" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-47" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;fontColor=#0000FF;strokeColor=none;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="850" y="1650" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-48" value="Maker Checker process" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="920" y="1585" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-49" value="PG-REDEM process" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="910" y="1650" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hVWf2E9da-X2Bw6i4vYb-50" value="Bank / Mobile money process" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF0000;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="910" y="1615" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-0" value="Verify the Identity and Sign calculation of the message" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="182" y="163" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-1" value="Create the records for Batch and Transactions and mark as status - REDEEM_INIT / REDEM ERROR&lt;br&gt;without changing contents" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="110" y="200" width="300" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="262" y="350" as="sourcePoint" />
+            <mxPoint x="422" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-3" value="Redeem Order Request &lt;br&gt;(batchId, payment mode, payment method, List of Payment instructions)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="257" y="309" width="410" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-4" value="Update the transaction status as per Redeem Response for each instructions to be in sync&lt;br&gt;And Forward the response message" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="110" y="476" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-5" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="589" as="sourcePoint" />
+            <mxPoint x="260" y="589.2" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-6" value="Redeem Order Response&lt;br&gt;&amp;nbsp;(batchId,, status for each payment instructions)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="103" y="548" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-7" value="User wanted to process the transactions" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="21" y="599" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-9" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;fontColor=#3333FF;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100.00000000000011" y="689" as="sourcePoint" />
+            <mxPoint x="260" y="689" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-10" value="Verify for existnace of valid batch and transaction ids available locally" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="140" y="700" width="230" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-11" value="Redeem Get Status Request &lt;br&gt;(batchId, list of payment instruction)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="257" y="737" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-12" value="Update the transaction status as per Redeem Response for each instructions to be in sync&lt;br&gt;And Forward the response message" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="122" y="841" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-13" value="Redeem Get Status Response &lt;br&gt;(batchId,&amp;nbsp; status for each payment instructions in the batch)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="103" y="901" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UG7oXCkSQOHxVN7Zkiuf-15" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;fontColor=#3333FF;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="945" as="sourcePoint" />
+            <mxPoint x="260" y="945" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mZf9Tpau-eUUAhn6dCyD-0" value="Based on the Rule&lt;br&gt;INITIAL_APPROVAL_COUNT =0 and FINAL_APPRVAL_COUNT = N" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="110" y="257" width="300" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-0" value="If the user / role in the hierarchy of Maker / Checker then&amp;nbsp;&lt;br&gt;INITIAL_APPROVAL_COUNT BY 1&amp;nbsp;&lt;br&gt;Else&lt;br&gt;Return Error," style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="120" y="1013" width="280" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-1" value="REDEEM PAY option &lt;br&gt;on CNPS system" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.05;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="31" y="1430" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="1250" as="sourcePoint" />
+            <mxPoint x="410" y="1250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-4" value="Redeem Update Status Request ( batchId, list of payment instruction, &lt;br&gt;with status = REDEM_READY / REDEM_CACNEL / REDEM_ISSUED_OFFLINE )" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="253" y="1207" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-6" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="97" y="1420" as="sourcePoint" />
+            <mxPoint x="250" y="1420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-8" value="Redeem Update Status Response (&lt;br&gt;batchId, status for each payment instructions in the batch, error_code = SUCCESS)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="253" y="1290" width="470" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-9" value="Redeem Update Status Response (&lt;br&gt;batchId, status for each payment instructions in the batch, error_code = SUCCESS)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="104" y="1370" width="470" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-10" value="INITIAL_APPROVAL_COUNT&amp;nbsp; == FINAL_APPROVAL_COUNT ?&lt;br&gt;Then submit for REDEEM_READY status update" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="120" y="1150" width="280" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-12" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;strokeColor=#3333FF;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="242" y="1330" as="sourcePoint" />
+            <mxPoint x="402" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-14" value="From Batch, select only transactions which are REDEM_READY" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="313" y="1260" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-15" value="Sync status of the transaction to REDEEM_READY" style="rounded=0;whiteSpace=wrap;html=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="133" y="1340" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-16" value="Check if the status of transaction is REDEEM_READY" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.039285714285714285;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="121" y="1521" width="249" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-17" value="Redeem Process Request (batchId,&amp;nbsp; &amp;nbsp;&lt;br&gt;CNPSredirectURL, CNPSCancelURL, CNPSNotifyURL)" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="253" y="1566" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-18" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="248.25" y="1603" as="sourcePoint" />
+            <mxPoint x="405.75" y="1603" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-19" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="239.5" y="1990" as="sourcePoint" />
+            <mxPoint x="400" y="1990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5rfI8ARYd9wgtuWU8EwH-20" value="CNPS NotifyURL ( status, amount, bank_reference_id)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="99" y="2000" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NO0o2W1C6Uo2LGVGYTRS-0" value="Update status to REDEEM_SUBMITTED" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.039285714285714285;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="305.75" y="1664" width="191.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NO0o2W1C6Uo2LGVGYTRS-1" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="242" y="1659.7" as="sourcePoint" />
+            <mxPoint x="400.0000000000002" y="1659.7" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NO0o2W1C6Uo2LGVGYTRS-2" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;startArrow=classic;startFill=1;endFill=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="1676.6999999999998" as="sourcePoint" />
+            <mxPoint x="248.00000000000023" y="1676.6999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NO0o2W1C6Uo2LGVGYTRS-3" value="Redeem Process Response" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="247" y="1634" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NO0o2W1C6Uo2LGVGYTRS-4" value="Redeem Process Response" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="hVWf2E9da-X2Bw6i4vYb-1" vertex="1">
+          <mxGeometry x="99" y="1650" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Approval StateMachine" id="Gmmv-GGrmX5IiKwuakFT">
+    <mxGraphModel dx="1707" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WrOSUGbGzKDxjQ10D2vC-0" />
+        <mxCell id="WrOSUGbGzKDxjQ10D2vC-1" parent="WrOSUGbGzKDxjQ10D2vC-0" />
+        <mxCell id="fgJ3cndIyshqXRmKEAe6-0" value="Transaction details&lt;br&gt;x &amp;lt; Amount &amp;lt;= Y&amp;nbsp;&lt;br&gt;Type&lt;br&gt;Channel etc." style="rounded=0;whiteSpace=wrap;html=1;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="200" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fgJ3cndIyshqXRmKEAe6-1" value="Maximum approvals&lt;br&gt;0 = INIT&lt;br&gt;1 = MAKER (first approval)&lt;br&gt;..&lt;br&gt;2 = CHECKER (2nd approval)&lt;br&gt;..&lt;br&gt;n = APPROVER (Final Approval)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="390" y="50" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fgJ3cndIyshqXRmKEAe6-3" value="For each Transaction ids" style="rounded=0;whiteSpace=wrap;html=1;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="640" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-0" value="init count = 0&lt;br&gt;&lt;br&gt;MAKER_COUNT = 1&lt;br&gt;CHECKER_COINT = 2&lt;br&gt;VERFIER_COUNT = 3&lt;br&gt;APPROVER_COUNT = 4" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="30" y="220" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-5" value="MC ROLES&lt;br&gt;&lt;br&gt;MAKER = 100&lt;br&gt;CHECKER = 200&lt;br&gt;VERFIER = 300&lt;br&gt;APPROVER = 400" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="190" y="220" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-6" value="AMOUNT &amp;lt;= 1,000&amp;nbsp;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="60" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-7" value="1,000 &amp;lt; AMOUNT &amp;lt;= 10.000" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="-10" y="450" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-8" value="10,000 &amp;lt; AMOUNT &amp;lt;= 1,00,000" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="-10" y="510" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-9" value="1,00,000 &amp;lt; AMOUNT &amp;lt;= 10,00,000" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="-10" y="570" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-10" value="RULES" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="80" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-11" value="FINAL COUNT = 1.&amp;nbsp; (MAKER)" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="270" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-12" value="FINAL COUNT = 2 (MAKER , &lt;br&gt;CHECKER)" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="210" y="450" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-13" value="FINAL COUNT = 3 (MAKER, &lt;br&gt;CHECKER, VERIFIER)" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="200" y="500" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-14" value="FINAL COUNT = 4 (MAKER, CHECKER, VERIFIER, APPROVER)" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="270" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-15" value="RULE CONFIGURATION" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="290" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-16" value="ROLE" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="520" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-17" value="MAKER, &lt;br&gt;COUNT=1" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="480" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-18" value="CHECKER, COUNT=2" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="480" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-19" value="VERIFIER, COUNT=3" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="480" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-20" value="APPROVER, COUNT=4" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="480" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-21" value="ROLE &amp;lt;- USERID (EMAIL or employe ID)" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="620" y="440" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-22" value="REDEM_INIT.&amp;nbsp; &amp;nbsp; INITIAL COUNT = 0" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="160" y="690" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7MQYs735oa8Ka1wN4rPz-23" value="RedeemOrderRequest.&amp;nbsp; &amp;nbsp;State = REDEM_INIT.&amp;nbsp; &amp;nbsp;MC INITIAL COUNT =&amp;nbsp; 0" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="160" y="740" width="470" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RpbRJDAP_bFSWU7mPxwn-0" value="Redeem Update Status Request.&amp;nbsp; &amp;nbsp;State = REDEM_INIT.&amp;nbsp; &amp;nbsp;MC INITIAL COUNT =&amp;nbsp; + 1. (Increment or assign from next from the vector / union).&amp;nbsp;&lt;br&gt;State = REDEM_READY , if INITIAL COUNT == FINAL COUNT&lt;br&gt;State - REDEM_INIT, if INITIAL_COUNT &amp;lt; FINAL COUNT" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="150" y="780" width="470" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8L45WDexu-rZlw97sl0j-0" value="Rule" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="540" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8L45WDexu-rZlw97sl0j-1" value="Transaction" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="660" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8L45WDexu-rZlw97sl0j-2" value="Role" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="540" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8L45WDexu-rZlw97sl0j-3" value="User" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="660" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" source="aMd5vsubl8Cn9fRQ2_0R-0" target="aMd5vsubl8Cn9fRQ2_0R-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-8" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" source="aMd5vsubl8Cn9fRQ2_0R-0" target="aMd5vsubl8Cn9fRQ2_0R-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-0" value="MakerChecker" style="rounded=0;whiteSpace=wrap;html=1;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="370" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-6" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" source="aMd5vsubl8Cn9fRQ2_0R-1" target="aMd5vsubl8Cn9fRQ2_0R-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-1" value="PGS REDEEM" style="rounded=0;whiteSpace=wrap;html=1;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="550" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-2" value="Financial Institutions" style="rounded=0;whiteSpace=wrap;html=1;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="730" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" source="aMd5vsubl8Cn9fRQ2_0R-3" target="aMd5vsubl8Cn9fRQ2_0R-0" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-3" value="CNPS Redeem Application" style="rounded=0;whiteSpace=wrap;html=1;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="160" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-7" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="415" y="1080" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-12" value="Admin user management&lt;br&gt;CNPS Redeem transaction User Management&lt;br&gt;Role Management&lt;br&gt;Rule Management&lt;br&gt;State configuration&lt;br&gt;Rule - Role assignment&lt;br&gt;Role - Rule assignment&lt;br&gt;Reports - transaction, Audit log, interface logs" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="490" y="1030" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="aMd5vsubl8Cn9fRQ2_0R-13" value="Update role should not be supported&lt;br&gt;Update of user id not to be supported&lt;br&gt;Admin user and CNPS Redeem user are different users" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="5" y="1040" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SBmMMFt8v7kaSLQAYxsX-0" value="PGS Redeem Eco system" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WrOSUGbGzKDxjQ10D2vC-1" vertex="1">
+          <mxGeometry x="400" y="880" width="220" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

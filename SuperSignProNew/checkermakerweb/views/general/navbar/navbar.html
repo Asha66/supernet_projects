@@ -1,0 +1,165 @@
+<!--*Copyright (C) 2020-2030 Supernet Technologies India Private Limited. All rights reserved.
+All material appearing on this repository, folder, sub folder and file(s) (“Content/Code etc”) is protected by copyright laws and is the property of Supernet Technologies India Pvt Ltd. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell, offer it for sale, or use such content to construct any kind of database, you may not alter or remove any copyright or other notice from copies of contents on this file.
+Copying or storing any contents except as provided by Supernet Technologies India Pvt Ltd is expressly prohibited without prior written permission of the Supernet Technologies.
+For permission to use the content, please contact legal@supernet-india.com.
+ -->
+<!--ajax-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<style>
+  #mainlangdiv{
+    position: relative; 
+  /*width: 60px;*/              
+  }
+
+  #langdiv{        
+    display:flex;
+    position: absolute; 
+    top: 9px; 
+    right: 80px; 
+  }
+  
+  
+  .main-header .navbar {
+      height: 30px!important;
+      margin-left:349px;
+      }
+      
+      .main-header .sidebar-toggle {
+        
+            padding: 5px 5px!important;
+      }
+      .sidebar-toggle{
+        height:40px!important;
+        width:50px!important;
+        margin-left:0px!important;
+        padding-top:20px!important;
+    
+        background-color:white!important;
+        
+      }
+      
+       .logo-mini{
+        padding-top:10px;
+      }
+      a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.layout-fixed{
+  
+    position: fixed;
+   
+}
+.hidden{
+      display:none;
+    }
+</style>
+
+
+<header class="main-header">
+  <!-- Logo -->
+  
+  <a id="imageLogo" href="/Dashboard"  class="logo layout-fixed" style="padding-right:90px;">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+     <span class="logo-mini primary-color">
+               <img src="/static/dist/img/wallet.png" alt="superpay.png" width="30" height="30"/> 
+              <!--SuperPay-->
+            </span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg primary-color">
+              SuperPay
+                <img class="logo-one" src="/static/dist/img/superpay.png" alt="superpay.png" width="170" height="30"/>
+            </span>
+           <span class="logo-lg">
+            <img class="logo-two" src="/static/dist/img/superpay.png" alt="superpay.png" width="200" height="30"/></span>
+        </a>
+        
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+   <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+       <!-- </a>-->
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    
+    
+    <div class="navbar-custom-menu">
+    
+
+    
+    <div class="dropstart">
+
+    
+    
+  <a  href="#"  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+   <img src="/static/dist/img/user_icon3.png" alt="User Icon" style="width:40;height:40;margin-right:20px">
+  </a>
+  
+  <div class="dropdown-menu dropdown-menu-right">
+              <!-- <a href="/Profile" class="dropdown-item">
+                <i class="fas fa-users mr-2"></i> Profile
+              </a>
+              <div class="dropdown-divider"></div> -->
+             <div id="namecard" style=" background-color:#011f4b;height: 100px;width: 300px; text-align: center; padding: 20px;">
+              
+           <span style="color:#FFFFFF;font-weight:bold; font-size: 120%;"> {{.username}}</span><br>
+          <span style="color:#FFFFFF;font-weight:600">{{.user_type}}</span><br>
+          <span style="color:#FFFFFF;font-weight:500">{{.mobile}}</span>
+            </div>
+              <a href="/ChangePassword" class="dropdown-item navbaricon">
+<!--                <i id="change-pwd" class="fas fa-key mr-2"></i> -->
+                <img src="/static/dist/img/change_pwd_icon.png" alt="User Avatar" style="width:35px;">
+                <span class="lang" key="CHANGEPASS" ></span>
+              </a>
+<!--                <hr> -->
+<!--              <div class="dropdown-divider"></div>-->
+              <a href="/Login" class="dropdown-item navbaricon">
+<!--                <i id="lout" class="fas fas fa-arrow-alt-circle-left"></i> -->
+                 <img src="/static/dist/img/logout_icon.png" alt="User Avatar" style="width:35px;">
+                 <span class="lang" key="LOGOUT" ></span>
+              </a>
+            </div>  
+  
+  
+  
+  <!--         <div class="languageselect" align="left">-->
+    <img class="hidden" src="https://img.icons8.com/material-outlined/24/000000/globe--v2.png"/>
+<!--   <label > Choose Language : </label>-->
+     <select id="translate" style="font-weight:10px;" class="term hidden">
+  
+            <option key="ENGLISH" class="lang" id="en-gb" value="english">English</option>
+            <option key="FRENCH" class="lang" id="zh-tw" value="french">French</option>
+           
+      </select>
+<!--      </div>-->
+</div>
+
+    </div>
+  </nav>
+</header>
+
+<script type="text/javascript" src="/static/dist/js/language.js"></script>
+
+<script>
+
+var language = {{.language}};
+//console.log("current language is ",language);
+document.getElementById("translate").value = language;
+</script>
+<script type="text/javascript">
+              $(document).ready(function(){
+                $("#input_operator").change(function(){
+                  var name = $("#input_operator").val();
+                  $(".hidden").hide();
+                  $("."+name).show();
+                  
+                })
+              })
+              
+              </script>

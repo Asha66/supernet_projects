@@ -1,0 +1,506 @@
+<!--*Copyright (C) 2020-2030 Supernet Technologies India Private Limited. All rights reserved.
+All material appearing on this repository, folder, sub folder and file(s) (“Content/Code etc”) is protected by copyright laws and is the property of Supernet Technologies India Pvt Ltd. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell, offer it for sale, or use such content to construct any kind of database, you may not alter or remove any copyright or other notice from copies of contents on this file.
+Copying or storing any contents except as provided by Supernet Technologies India Pvt Ltd is expressly prohibited without prior written permission of the Supernet Technologies.
+For permission to use the content, please contact legal@supernet-india.com.
+ -->
+<style>
+
+.zoom1 {
+  transition: transform .2s; /* Animation */
+}
+.zoom1:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.07);
+}
+
+.nav-pills .nav-link.active{
+  color:black!important;
+  background-color:#E2DFD2!important;
+}
+a#usermanagement-active.nav-link.active{
+  background-color:white!important; 
+}
+a#systemmanagement-active.nav-link.active{
+  background-color:white!important; 
+}
+a#billermanagement-active.nav-link.active{
+  background-color:white!important; 
+}
+a#b2badministration-active.nav-link.active{
+  background-color:white!important; 
+}
+a#b2ccustomer-active.nav-link.active{
+  background-color:white!important; 
+}
+
+a#accounting-active.nav-link.active{
+  background-color:white!important; 
+}
+a#transactionmng-active.nav-link.active{
+  background-color:white!important; 
+}
+a#reports-active.nav-link.active{
+  background-color:white!important; 
+}
+
+.treeview-menu>li>a{
+  font-size:16px;
+  /*font-weight:bold;*/
+}
+.sidebarfont {
+    font-size: 17px!important;
+}
+.elevation-4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
+}
+.layout-fixed{
+  bottom: 0;
+    float: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+
+
+
+  </style>
+   <aside class="main-sidebar elevation-4 layout-fixed overflow-auto">
+  <!-- sidebar: style can be found in sidebar.less -->
+    <!--<section class="sidebar">-->
+<!-- Sidebar -->
+<div class="sidebar">
+  <nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column sidebar-menu" data-widget="treeview" role="menu" data-accordion="false">
+      <!-- Add icons to the links using the .nav-icon class
+      with font-awesome or any other icon font library -->
+      <li class="nav-item has-treeview" style="padding-top:0px;"></i>
+        <a href="/Dashboard" id="dashboard-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-tachometer" style="padding-right:30px;"></i>
+          <b><span class="lang" key="DASHBOARD">Dashboard</span></b>
+        </a>
+      </li>
+      <li id="usermanagement-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="usermanagement-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-user"></i>
+          <span class="lang" key="UMGMT">System User Management</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/SysUser/SearchsysUser" id="searchsysuser-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"></i> 
+              <span class="lang" key="SEASYSUSER">Search System Users</span>
+            </a>
+          </li>
+        
+        </ul>  
+      </li>
+      
+      <li id="userrmanagement-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="userrmanagement-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-user"></i>    
+          <span class="lang" key="USERMGMT">User Management</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/User/SearchUser" id="searchuser-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"></i> 
+              <span class="lang" key="SEARCHUSER">Search User</span>
+            </a>
+          </li>
+         
+        </ul>
+      </li>
+      
+      <li id="systemmanagement-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="systemmanagement-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-cogs"></i>
+          <span class="lang" key="SYSCONFIG">System Configuration</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Channel/SearchChannel" id="searchchannel-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"  aria-hidden="true"></i>
+              <span class="lang" key="SETCHANNEL">Search User</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/UserType/SearchuserType" id="searchusertype-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="SETUTYPE">Search User</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Status/SearchStatus" id="searchstatus-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="SETSTATUS">Search User</span>
+            </a>
+          </li>
+           <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Category/SearchCategory" id="searchcategory-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="SETCATEGORY">Search User</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/ChargeItems/SearchChargeItems" id="searchchargeitems-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+               <span class="lang" key="SETCHARGEITEM">Search User</span> 
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Clients/SearchClients" id="searchclients-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              <span class="lang" key="SETCLIENTS">Search User</span> 
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/AccountType/SearchAccountType" id="searchaccounttype-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              <span class="lang" key="SETACCTYPE">Search User</span> 
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;" href="/Service/SearchService">
+            <a href="/Service/SearchService" id="searchservice-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              <span class="lang" key="SETSERVICE">Search User</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/ChargeMnemonic/SearchChargeMnemonic" id="searchchargemnemonic-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              <span class="lang" key="SETCHARGEMNEMONIC">Search User</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Package/SearchPackage" id="searchpackage-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              <span class="lang" key="SETPACKAGE">Search User</span>
+            </a>
+          </li>
+          
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Limits/SearchLimits" id="searchlimits-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+              <span class="lang" key="SEARCHLIMIT">Search Limits</span>
+            </a>
+          </li>
+         
+        </ul>
+      </li>
+      
+      <li id="billermanagement-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="billermanagement-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-files-o"></i>
+          <span class="lang" key="BILLERMANG">Biller Management</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Biller/SearchBiller" id="searchbiller-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"  aria-hidden="true"></i>
+              <span class="lang" key="SEARCHBILLER">Search Biller</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="billeronbording-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="BILLERON">Biller onboarding *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="billermng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="BILLERMAG">Biller management *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="billerglmng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="BILLERGLMAG">Biller GL management *</span>
+            </a>
+          </li>
+          </ul>
+          </li>
+          <li id="b2badministration-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="b2badministration-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-briefcase"></i>
+          <span class="lang" key="B2BADMIN">B2B Administration *</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="distributormng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"  aria-hidden="true"></i>
+              <span class="lang" key="DISTMAG">Distributor management *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="agentmng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="AGENTMAG">Agent management *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="billermng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="PARTNERMAG">Partner management *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="riskprofiling-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="RISKMAG">Risk profiling *</span>
+            </a>
+          </li>
+          </ul>
+          </li>
+          
+          <li id="b2ccustomer-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="b2ccustomer-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-users"></i>
+          <span class="lang" key="B2CCUST">B2C Customer *</span><br>
+           <span style="padding-left:30px" class="lang" key="MGMT">Management *</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="distributormng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"  aria-hidden="true"></i>
+              <span class="lang" key="MGMT">Management *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="agentmng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="CUSTMAG">Customer profilemanagement *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="billermng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="RISKMAG">Risk Profiling *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="riskprofiling-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="KYC">KYC *</span>
+            </a>
+          </li>
+          </ul>
+          </li>
+          
+          <li id="accounting-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="accounting-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-file"></i>
+          <span class="lang" key="ACCOUNTING">Accounting *</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+        <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Account/SearchAccount" id="account-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="SEARCHACCOUNT">Search Account</span>
+            </a>
+          </li>
+          
+          <li id="account-menu" class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="account-active" class="nav-link sidebarfont">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="TOPUPACCOUNT">Topup Account</span>
+            </a>
+         
+          <ul class="nav nav-treeview treeview-menu" style="padding-left:20px;">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Topup/SearchTopup" id="topup-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> 
+              <span class="lang" key="POOLACCOUNT">System Pool Account Topup</span>
+            </a>
+          </li>
+          </ul>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="distributormng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"  aria-hidden="true"></i>
+              <span class="lang" key="RISKPROFILING">Distributor accounting *</span>
+            </a>
+          </li>
+          
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="agentmng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="AGENTACC">Agent accounting *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="billermng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="PAYMENTINST">Payment institutionaccounting *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="riskprofiling-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="RECONREPORTS">Recon reports *</span>
+            </a>
+          </li>
+          </ul>
+          </li>
+          <li id="transactionmanagement-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="transactionmng-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-exchange"></i>
+          <span class="lang" key="TRANSMAG">Transaction Management *</span><br>
+          <span style="padding-left:30px" class="lang" key="MGMT">Management *</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="distributormng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"  aria-hidden="true"></i>
+              <span class="lang" key="MANULTRANS">Manual transaction update *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="agentmng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="TARNSREVERSAL">Transaction reversal *</span>
+            </a>
+          </li>
+          </ul>
+          </li>
+          
+          <li id="reports-menu" class="nav-item has-treeview treeview" style="padding-top:5px;">
+        <a href="#" id="reports-active" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-file-text-o"></i>
+          <span class="lang" key="REPORTS">Reports</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="nav nav-treeview treeview-menu">
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="distributormng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right"  aria-hidden="true"></i>
+              <span class="lang" key="AGENTREPORT">Audit Report *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Report/TransactionReport" id="transactionreport-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="TRANSREPORT">Transaction Report</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Report/AccountReport" id="accounttransactionreport-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="ACCOUNTREPORT">Accounts Transaction Report</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Report/ChannelReport" id="channelreport-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="CHANNEREPORT">Channel Report</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Report/BillerReport" id="billerreport-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="BILLERREPORT">Biller Report</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="/Report/PaymentInstitutionReport" id="payinsreport-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="PAYMENTREPORT">Payment Institution Report</span>
+            </a>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="billermng-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="CHANNEREPORT">Channel report *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="riskprofiling-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="BILLERREPORT">Biller report *</span>
+            </a>
+          </li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="riskprofiling-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="PAYMENTREPORT">Payment institution report *</span>
+            </a>
+          </li>li>
+          <li class="nav-item sidebarfont sidebaranchor zoom1" style="padding-top:5px;">
+            <a href="#" id="riskprofiling-active" class="nav-link">
+              <!--<i class="fa fa-caret-right"></i><p id="su">Search User</p>-->
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 
+              <span class="lang" key="SYSTEMREPORT">System report *</span>
+            </a>
+          </li>
+          </ul>
+          </li>   
+      
+      <li class="nav-item has-treeview" style="padding-top:5px;">
+        <a href="/Login" class="nav-link sidebarfont">
+          <i class="nav-icon fa fa-sign-out text-white"></i>
+          <span class="lang" key="LOGOUT">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.sidebar-menu -->
+</div>
+ <!--</section>-->
+<!--    section end-->
+  </aside>
+<!--  aside end -->
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--<script type="text/javascript" src="/static/dist/css/adminlte.min.css"></script>-->

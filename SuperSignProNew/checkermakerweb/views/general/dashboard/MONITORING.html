@@ -1,0 +1,62 @@
+<!--*Copyright (C) 2020-2030 Supernet Technologies India Private Limited. All rights reserved.
+All material appearing on this repository, folder, sub folder and file(s) (“Content/Code etc”) is protected by copyright laws and is the property of Supernet Technologies India Pvt Ltd. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell, offer it for sale, or use such content to construct any kind of database, you may not alter or remove any copyright or other notice from copies of contents on this file.
+Copying or storing any contents except as provided by Supernet Technologies India Pvt Ltd is expressly prohibited without prior written permission of the Supernet Technologies.
+For permission to use the content, please contact legal@supernet-india.com.
+ -->
+<li class="treeview"  val="http://192.168.1.101/nagios/cgi-bin/tac.cgi">
+      <a href="#" target="iFrame"><i class="fa fa-desktop text-white"></i> <span>System Monitoring</span><i class="fa fa-angle-left pull-right"></i></a>
+      <ul class="treeview-menu">
+        <li><a href="http://192.168.1.101/nagios/cgi-bin/tac.cgi" target="iFrame"><i class="fa fa-circle-o-notch"></i> Tactical Overview</a></li>
+        <li><a href="http://192.168.1.101/nagios/map.html?host=all" target="iFrame"><i class="fa fa-circle-o-notch"></i> Network Map</a></li>
+        <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?hostgroup=all&style=hostdetail" target="iFrame"><i class="fa fa-circle-o-notch"></i> Hosts</a></li>
+        <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?host=all" target="iFrame"><i class="fa fa-circle-o-notch"></i> Services</a></li>
+        <li><a href="" target="iFrame"><i class="fa fa-circle-o-notch"></i> Host Groups <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?hostgroup=all&style=overview" target="iFrame"><i class="fa fa-circle-o-notch"></i> Overview</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?hostgroup=all&style=summary" target="iFrame"><i class="fa fa-circle-o-notch"></i> Summary</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?hostgroup=all&style=grid" target="iFrame"><i class="fa fa-circle-o-notch"></i> Grid</a></li>
+          </ul>
+        </li>
+        <li><a href="" target="iFrame"><i class="fa fa-circle-o-notch"></i> Service Groups <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+          <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?servicegroup=all&style=overview" target="iFrame"><i class="fa fa-circle-o-notch"></i> Overview</a></li>
+          <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?servicegroup=all&style=summary" target="iFrame"><i class="fa fa-circle-o-notch"></i> Summary</a></li>
+          <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?servicegroup=all&style=grid" target="iFrame"><i class="fa fa-circle-o-notch"></i> Grid</a></li>
+          </ul>
+        </li>
+        <li><a href="" target="iFrame"><i class="fa fa-circle-o-notch"></i> Problems <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?host=all&servicestatustypes=28" target="iFrame"><i class="fa fa-circle-o-notch"></i> All</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?host=all&servicestatustypes=28" target="iFrame"><i class="fa fa-circle-o-notch"></i> Services (Unhandled)</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/status.cgi?hostgroup=all&style=hostdetail&hoststatustypes=12&hostprops=42" target="iFrame"><i class="fa fa-circle-o-notch"></i> Hosts (Unhandled)</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/outages.cgi" target="iFrame"><i class="fa fa-circle-o-notch"></i> Network Outage</a></li>
+          </ul>
+        </li>
+        <li><a href="" target="iFrame"><i class="fa fa-circle-o-notch"></i> Reports <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/avail.cgi" target="iFrame"><i class="fa fa-circle-o-notch"></i> Availability</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/trends.cgi" target="iFrame"><i class="fa fa-circle-o-notch"></i> Trends</a></li>
+            <li class="treeview"><a href="" target="iFrame"><i class="fa fa-circle-o-notch"></i> Alerts <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a href="http://192.168.1.101/nagios/cgi-bin/history.cgi?host=all" target="iFrame"><i class="fa fa-circle-o"></i> All</a></li>
+              <li><a href="http://192.168.1.101/nagios/cgi-bin/history.cgi?host=all" target="iFrame"><i class="fa fa-circle-o"></i> History</a></li>
+              <li><a href="http://192.168.1.101/nagios/cgi-bin/summary.cgi" target="iFrame"><i class="fa fa-circle-o"></i> Summary</a></li>
+              <li><a href="http://192.168.1.101/nagios/histogram.html" target="iFrame"><i class="fa fa-circle-o"></i> Histogram</a></li>
+            </ul>
+            </li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/notifications.cgi?contact=all" target="iFrame"><i class="fa fa-circle-o-notch"></i> Notification</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/showlog.cgi" target="iFrame"><i class="fa fa-circle-o-notch"></i> Event Log</a></li>
+          </ul>
+        </li>
+        <li class="treeview"><a href="" target="iFrame"><i class="fa fa-circle-o-notch"></i> Systems <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/extinfo.cgi?type=3" target="iFrame"><i class="fa fa-circle-o-notch"></i> Comments</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/extinfo.cgi?type=6" target="iFrame"><i class="fa fa-circle-o-notch"></i> Downtime</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/extinfo.cgi?type=0" target="iFrame"><i class="fa fa-circle-o-notch"></i> Process Info</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/extinfo.cgi?type=4" target="iFrame"><i class="fa fa-circle-o-notch"></i> Performance Info</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/extinfo.cgi?type=7" target="iFrame"><i class="fa fa-circle-o-notch"></i> Scheduling Queue</a></li>
+            <li><a href="http://192.168.1.101/nagios/cgi-bin/config.cgi" target="iFrame"><i class="fa fa-circle-o-notch"></i> Configuration</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>

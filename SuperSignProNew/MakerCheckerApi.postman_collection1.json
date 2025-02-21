@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "823c6292-c318-4ec8-b683-e2aa65eccdf6",
+		"name": "MakerCheckerApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28643346"
+	},
+	"item": [
+		{
+			"name": "Maker Checker - redeem order  api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"version\": \"v1.2\",\n    \"language\": \"en\",\n    \"user_id\": \"test123\",\n    \"cnps_application_transaction_id\": \"65009112206702\",\n    \"transaction_start_date\": \"2024-19-12 05:30:14\",\n    \"description\": \"PPI payment\",\n    \"total_amount\": \"200\",\n    \"currency\": \"XOF\",\n    \"notification_url\": \"https://api.esb.cnps.free.ci/payment/v1/rest/payments/0202200120244/callback\",\n    \"return_url\": \"https://api.esb.cnps.free.ci/payment/v1/rest/payments/0202200120244/return\",\n    \"cancel_url\": \"https://api.esb.cnps.free.ci/payment/v1/rest/payments/0202200120244/cancel\",\n    \"benefit_type\": \"ASSUR-MAT/AT-MP/AF\",\n    \"payment_mode\": \"BANKTRANSFER\",\n    \"payment_method\": \"ECOBANK\",\n    \"batch_sign\":\"\",\n    \"Benefits\": [\n        {\n            \"cnps_transaction_id\": \"TRA1000002030042\",\n            \"cnps_entity_id\": \"1\",\n            \"entity_name\": \"COULIBALY AMADOU A\",\n            \"entity_phone\": \"XXXXXXXX\",\n            \"entity_email\": \"mailto:entity@domain.com\",\n            \"cnps_prestation_number\": \"0202200120244_20222\",\n            \"benefit_code\": \"1\",\n            \"benefit_label\": \"LABEL1\",\n            \"professional_category\": \"CATEGORY1\",\n            \"country_name\": \"CI\",\n            \"benefit_account_number\": \" CI0590100112000756710442\",\n            \"swift_code\": \" SCBLCIAB\",\n            \"bank_code\": \"123456\",\n            \"benefit_msisdn\": \"1234567890\",\n            \"benefit_amount\": \"100\",\n            \"prestation_period\": \"31-12-2024\",\n            \"benefit_sign\": \"\"\n        },\n        {\n            \"cnps_transaction_id\": \"TRA2003000010043\",\n            \"cnps_entity_id\": \"1\",\n            \"entity_name\": \"COULIBALY AMADOU B\",\n            \"entity_phone\": \"YYYYYYY\",\n            \"entity_email\": \"mailto:entity@domain2.com\",\n            \"cnps_prestation_number\": \"0202200120244_20201\",\n            \"benefit_code\": \"2\",\n            \"benefit_label\": \"LABEL2\",\n            \"professional_category\": \"CATEGORY2\",\n            \"country_name\": \"CI\",\n            \"benefit_account_number\": \"CI0590100112000756700552\",\n            \"swift_code\": \" SCBLCIAB\",\n            \"bank_code\": \"123456\",\n            \"benefit_msisdn\": \"1234567123\",\n            \"benefit_amount\": \"100\",\n            \"prestation_period\": \"31-12-2024\",\n            \"benefit_sign\": \"\"\n        }\n    ],\n\n    \"approval\":[\n  {\n    \"cnps_transaction_id\": \"TRA1000002030042\",\n    \"approval_user_id\": \"test@gmail.com\",\n    \"approval_date_time\": \"2022-11-04 11:50:14\",\n    \"description\": \"APPROVED for further processing\",\n    \"approval_sign\": \"\"\n  },\n  {\n    \"cnps_transaction_id\": \"TRA2003000010043\",\n    \"approval_user_id\": \"test@gmail.com\",\n    \"approval_date_time\": \"2022-11-04 11:50:14\",\n    \"description\": \"All processing completed for redemption\",\n    \"approval_sign\": \"\"\n  }\n]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/reedemOrderCheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"reedemOrderCheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maker Checker - redeem update status api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"version\": \"v1.2\",\n    \"language\": \"en\",\n    \"user_id\": \"vk18\",\n    \"cnps_application_transaction_id\": \"25879006702\",\n    \"cnps_application_transaction_status\": \"REDEM_ORDER_RECEIVED\",\n    \"sign\": \"PKdOwAFl5oUOnjf7aqFsmtYCKdYsn7TbTfAitmcUsMh6pmDX4fmCwXyuFve65hKlQCnps6WTbs1yGyaF/DvVkw==\",\n    \"benefits\": [\n        {\n            \"cnps_transaction_id\": \"TRA0000002010046\",\n            \"cnps_transaction_status\": \"REDEM_READY\",\n            \"benefitsign\": \"qfwa0JdWW3jX7H/SdBcy6EwNzierathjeo6axT5NEOHgefHzbEBGvooKc3E5qzI+uxrHDOlpe4col9xsDSvvfQ==\"\n        },\n        {\n             \"cnps_transaction_id\": \"TRA0001000010047\",\n            \"cnps_transaction_status\": \"REDEM_READY\",\n            \"benefitsign\": \"qfwa0JdWW3jX7H/SdBcy6EwNzierathjeo6axT5NEOHgefHzbEBGvooKc3E5qzI+uxrHDOlpe4col9xsDSvvfQ==\"\n        }\n    ],\n    \"approval\": [\n        {\n            \"cnps_transaction_id\": \"TRA0000002010046\",\n            \"approval_user_id\": \"mailto:maker@gmail.com\",\n            \"approval_date_time\": \"2022-11-04 11:50:14\",\n            \"description\": \"APPROVED for next step\",\n            \"approval_sign\": \"qfwa0JdWW3jX7H/SdBcy6EwNzierathjeo6axT5NEOHgefHzbEBGvooKc3E5qzI+uxrHDOlpe4col9xsDSvvfQ==\"\n        },\n        {\n             \"cnps_transaction_id\": \"TRA0001000010047\",\n            \"approval_user_id\": \"mailto:maker@gmail.com\",\n            \"approval_date_time\": \"2022-11-04 11:50:14\",\n            \"description\": \"APPROVED for next step\",\n            \"approval_sign\": \"qfwa0JdWW3jX7H/SdBcy6EwNzierathjeo6axT5NEOHgefHzbEBGvooKc3E5qzI+uxrHDOlpe4col9xsDSvvfQ==\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/reedemUpdateStatusCheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"reedemUpdateStatusCheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maker Checker - redeem get status api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"ak@gmail.com\",\n    \"owner\": \"eCNPS\",\n    \"service\": \"REDEEM_ORDER\",\n    \"channel\": \"Web\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/redeemgetStatusCheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"redeemgetStatusCheck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

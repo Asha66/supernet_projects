@@ -1,0 +1,445 @@
+<!--*Copyright (C) 2020-2030 Supernet Technologies India Private Limited. All rights reserved.
+All material appearing on this repository, folder, sub folder and file(s) (“Content/Code etc”) is protected by copyright laws and is the property of Supernet Technologies India Pvt Ltd. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell, offer it for sale, or use such content to construct any kind of database, you may not alter or remove any copyright or other notice from copies of contents on this file.
+Copying or storing any contents except as provided by Supernet Technologies India Pvt Ltd is expressly prohibited without prior written permission of the Supernet Technologies.
+For permission to use the content, please contact legal@supernet-india.com.
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SuperPay | Admin</title>
+    <link rel="icon" href="/static/dist/img/wallet.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/dist/img/wallet.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="../../../Admin/static/css/main.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <!-- FontAwesome 4.3.0 -->
+    <link href="../../../Admin/static/bootstrap/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons 2.0.0 -->
+    <link href="../../../Admin/static/bootstrap/fonts/ionicons.min.css" rel="stylesheet" type="text/css" />    
+    <!-- Theme style -->
+    <link href="../../../Admin/static/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link href="../../../Admin/static/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <script src="../../../Admin/static/dist/js/DisableRightClick.js"></script>
+    <link rel="stylesheet" href="/static/dist/css/style2.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/plugins/duDialog-master/duDialog.css">
+<!--     <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">-->
+<!--  <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">-->
+
+<meta content="Bar Chart,Column Chart" name="keywords">
+  <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+  <link href="https://cdn.anychart.com/releases/8.11.0/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4" rel="stylesheet" type="text/css">
+    <!--ajax-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+  <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+  <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+    <style>
+    .chart-legend{
+      margin-right:-7px;
+      padding-right:0px!important;
+    } 
+   
+    #container1 {
+      width: 80%;
+      height: 100%;
+      margin-left: 150px;
+      padding: 0;
+    }
+    
+    .anychart-credits {
+   display: none;
+}
+
+
+    .justify-content-center {
+    justify-content: flex-end!important;
+}
+
+    
+    /*.small-box {
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px rgb(0 0 0);
+    border-radius: 19.5px;
+    height: 120px;
+    margin-top: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-weight: bolder;
+    margin-bottom: 14px;
+}   
+.bg-info {
+    background-color: white;
+}
+
+.bg-warning {
+    background-color: #ffc107;
+}
+
+/*body {
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+       }
+       * {
+          box-sizing: border-box;
+       }
+       .card {
+          color: white;
+          float: left;
+          width: calc(25% - 30px);
+          padding: 0px 0 8px 0;
+          border-radius: 10px;
+          margin: 10px;
+          height: 100px;
+       }
+       .card p {
+          font-size: 18px;
+       }
+       .cardContainer:after {
+          content: "";
+          display: table;
+          clear: both;
+          
+       }
+       @media screen and (max-width: 600px) {
+          .card {
+             width: 100%;
+          }
+       }*/
+    </style>
+  </head>
+  <body class="skin-superpay sidebar-mini">
+    <div class="">
+  <!--<div class="wrapper">-->
+    <!--navbar external link-->
+        {{template "general/navbar/navbar.html" .}}
+    <!--sidebar external link-->
+        {{template "general/default/sidebar.html" .}}
+        <section class="content-wrapper">
+          <div class="box box-indigo">
+            <div class="box-header bg-mustard">
+              <h2 class="box-title lang" key="DASHBOARD">
+                <strong>Dashboard</strong>
+              </h2>
+             <!-- <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus color-white"></i></button>
+              </div>-->
+            </div>
+            <div class="box-body">
+              <div class="row">
+            <!--<div class="col-md-5">
+                  <div class="chart-responsive">
+                    <canvas id="pieChart" height="250"></canvas>
+                  </div>
+                </div>-->
+                <div class="col-md">
+                  <h5 style="text-align:left;font-weight:bold;" class="lang" key="USERDETAILS">User Details</h5>
+                  
+                  
+                <div id = "container" style="width: 493px;height: 390px;margin-top: 30px;padding-bottom:0px;padding-top:0px;">
+                </div>
+              
+                    <ul class="chart-legend clearfix pull nav nav-stacked d-flex justify-content-center" style="margin-top: -390px;">
+                      <li class="listcontent" style="border:none;border: 1px solid silver;border-radius:10px;box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.26);margin-right:-30px;">
+                        <div class="row margin">
+                          <div class="col-md-16 text-center">
+                            <i class="ion ion-ios-people fa-4x primary-color"></i>
+                          </div>
+                          <div class="col-md-16 color-indigo">
+                            <span style="text-align:center;">
+                              <h4 class="lang" key="ADMIN">
+                                <b>System Users</b>
+                              </h4>
+                              <h4>
+                                <b id ="totalAgents">{{.sysusercount}}</b>
+                              </h4>
+                            </span>
+                        <!--<h6 class="lang" key="NOAD">Total No of Systemusers</h6>-->
+                          </div>
+                        </div> 
+                      </li>  
+                      <li style="border:none;border: 1px solid silver;border-radius:10px;box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.26);">
+                        <div class="row margin">
+                          <div class="col-md-16 text-center">
+                            <i class="ion ion-ios-people fa-4x secondary-color"></i>
+                          </div>
+                          <div class="col-md-16 color-indigo">
+                            <span style="text-align:center;">            
+                              <h4 class="lang" key="CUST">
+                                <b>Consumers</b>
+                              </h4>
+                              <h4>
+                                <b id="totalDistributors">{{.customercount}}</b>
+                              </h4>
+                            </span>
+                        <!--<h6 class="lang" key="NOAC">Total No of Consumers</h6>-->
+                          </div>
+                        </div>
+                      </li>   
+                    </ul>
+                    <ul class="chart-legend clearfix pull nav nav-stacked d-flex justify-content-center" style="margin-top: 10px;">
+                      <li style="border: 1px solid silver;border-radius:10px;box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.26);margin-right:-30px;">
+                        <div class="row margin">
+                          <div class="col-md-16 text-center">
+                            <i class="ion ion-ios-people fa-4x color-mustard"></i>
+                          </div>
+                          <div class="col-md-16 color-indigo">
+                            <span style="text-align:center;">
+                              <h4 class="lang" key="DIST" style="padding-right:20px;">
+                                <b>Distributors</b>
+                              </h4>
+                              <h4>
+                                <b id="totalMerchants">{{.distributorcount}}</b>
+                              </h4>
+                            </span>
+                        <!--<h6 class="lang" key="NOADIST">Total No of Distributors</h6>-->
+                          </div>
+                        </div>
+                      </li>        
+                        <li style="border:none;border: 1px solid silver;border-radius:10px;box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.26);">
+                        <div class="row margin">
+                          <div class="col-md-16 text-center">
+                            <i class="ion ion-ios-people fa-4x color-indigo"></i>
+                          </div>
+                          <div class="col-md-16 color-indigo">
+                            <span style="text-align:center;">            
+                              <h4 class="lang" key="AGENT">
+                                <b>Agents</b>
+                              </h4>
+                              <h4>
+                                <b  id ="totalCustomers">{{.agentcount}}</b>
+                              </h4>
+                            </span>
+                        <!--<h6 class="lang" key="NOAG">Total No of Agents</h6>-->
+                          </div>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                    <hr>
+                    <h5 style="text-align:left;font-weight:bold;" class="lang" key="TRANSACTIONDETAILS">Transaction Details</h5>
+                    <div id="container1" style="height:400px;"></div>
+                  
+                </div>
+              </div>
+            </div>        
+          </div>
+        </section>
+    </div>
+    <!-- Content Wrapper. Contains page content -->
+    <!--<div class="content-wrapper">
+      <iframe id="iFrameLandingPage" name="iFrame" src="" style="width: 100%; height: 1200px; overflow:hidden;" scrolling="yes" marginwidth="0"  frameborder="0" ></iframe>
+    </div>-->
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+    <!--<h4 class="color-indigo">Payments at your finger tips!!!</h4>-->
+        <small>
+          <b>Powered By 
+            <a href="http://www.proyava.com" target="_blank">Proyava Innovations</a>
+          </b>
+        </small> 
+      </div>
+      <small>
+        <strong>&copy; 2022 | </strong> 
+          All Rights Reserved.
+      </small><br>
+    </footer>
+    <!-- Add the sidebar's background. This div must be placed
+    immediately after the control sidebar -->
+    <a href="#" class="scrollToTop"></a>   
+    <!-- jQuery 2.1.4 -->
+    <script src="../../../Admin/static/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- jQuery UI 1.11.2 -->
+    <script src="../../../Admin/static/dist/js/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <!-- Bootstrap 5.0.4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <!-- Slimscroll -->
+    <script src="../../../Admin/static/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="../../../Admin/static/dist/js/app.min.js" type="text/javascript"></script>    
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <!--script src="../../../Admin/static/dist/js/pages/dashboard.js" type="text/javascript"></script>    
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../../Admin/static/dist/js/demo.js" type="text/javascript"></script>
+    <!--language-->
+    <script type="text/javascript" src="/static/dist/js/language.js"></script>
+<!--    <script type="text/javascript" src="/static/dist/js/validation.js"></script>-->
+
+<script type="text/javascript" src="../../static/plugins/duDialog-master/duDialog.js"></script>
+         <script type="text/javascript">
+        
+        var data = {{.DisplayMessage}};
+              
+              var data2 = {{.PasswordsetMessage}};
+              //console.log(data2);
+              if (data2 != ""){
+             new duDialog(null, data2, '', { okText: 'ok',
+  callbacks: {
+    okClick: function(){
+      window.location.replace("/ChangePassword");
+    }
+  }
+});
+
+
+               
+              }
+              </script>
+              
+              <!-- Dought Nut Chart-->
+ <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});     
+      </script>
+      
+      <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'User Details');
+            data.addColumn('number', 'Percentage');
+            data.addRows([
+               ['System Users', {{.sysusercount}}],
+              // ['Agents', 3],
+               //['Distributors', 0],
+               ['Consumers', {{.customercount}}]
+               
+            ]);
+               
+            // Set chart options
+            var options = {
+               'title':'',
+               'width':630,
+               'height':380,
+              padding: {
+                top: 10
+            },
+               colors: ['#011f4b', '#303F9F', '#fdcc01', '#b3cde0'],
+               pieHole: 0.4
+            };
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.PieChart(document.getElementById('container7'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+      
+      
+      
+
+<script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script type="text/javascript">anychart.onDocumentReady(function () {
+
+    // create a data set
+     var data = anychart.data.set([
+      [{{.Approved}}, {{.approvedcount}}, {{.approvedamount}},"#009933", "#009933", "#009933", {enabled: false}],
+      [{{.Pending}}, {{.pendingcount}}, {{.pendingamount}},"#fdcc01", "#fdcc01", "#fdcc01", {enabled: false}],
+      [{{.Declined}}, {{.declinedcount}}, {{.declinedamount}},"#ff0000", "#ff0000", "#ff0000", {enabled: false}]
+    ]);
+
+    // map the data
+    var seriesData_1 = data.mapAs({x: 0, value: 1, fill: 3, stroke: 5, label: 6});
+    var seriesData_2 = data.mapAs({x: 0, value: 2, fill: 4, stroke: 5, label: 6});
+
+    // create a chart
+    var chart = anychart.column();
+
+    // create the first series, set the data and name
+    var series1 = chart.column(seriesData_1);
+    series1.name("Total Number of Transactions");
+
+    // create the second series, set the data and name
+    var series2 = chart.column(seriesData_2);
+    series2.name("Total Amount");
+
+    // set the chart title
+    chart.title("");
+    chart.barGroupsPadding(7);
+
+    // set the titles of the axes
+    var xAxis = chart.xAxis();
+    xAxis.title("");
+    var yAxis = chart.yAxis();
+    yAxis.title("");
+
+    // set the container id
+    chart.container("container1");
+
+    // initiate drawing the chart
+    chart.draw();
+});</script>
+
+<script>
+
+    anychart.onDocumentReady(function () {
+      // create pie chart with passed data
+     var chart = anychart.pie([
+        [{{.Systemuser}}, {{.sysusercount}}],
+        [{{.Agent}}, {{.agentcount}}],
+        [{{.Distributor}}, {{.distributorcount}}],
+        [{{.Customer}}, {{.customercount}}]
+      ]);
+
+      // creates palette
+      var palette = anychart.palettes.distinctColors();
+      palette.items([
+        { color: '#011f4b' },
+        { color: '#303F9F' },
+        { color: '#fdcc01' },
+        { color: '#b3cde0' }
+      ]);
+
+      // set chart radius
+      chart
+        .radius('70%')
+        // create empty area in pie chart
+        .innerRadius('50%')
+        // set chart palette
+        .palette(palette);
+
+      
+      // format tooltip
+      chart.tooltip().format('Percent Value: {%PercentValue}%');
+
+      // create standalone label and set label settings
+      var label = anychart.standalones.label();
+      label
+        .enabled(true)
+        .text('')
+        .width('100%')
+        .height('100%')
+        .adjustFontSize(false, false)
+        .minFontSize(10)
+        .maxFontSize(25)
+        .fontColor('#60727b')
+        .position('center')
+        .anchor('center')
+        .hAlign('center')
+        .vAlign('middle');
+
+      // set label to center content of chart
+      chart.center().content(label);
+      chart.legend().width('75%').padding(30,0,20,0);
+
+      // set container id for the chart
+      chart.container('container');
+      // initiate chart drawing
+      chart.draw();
+    });
+  
+</script>
+  </body>
+</html>

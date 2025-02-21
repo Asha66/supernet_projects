@@ -1,0 +1,131 @@
+#content 
+{
+ padding: 0px;
+}
+
+#dialog 
+{
+ position: absolute;
+ width: 30%;
+ padding: 0px;
+ z-index: 2000;
+ background: #fff;
+}
+
+#dialog-header 
+{
+ display: block;
+ position: relative;
+ padding: 3px 8px 7px 0px;
+ height: 25px;
+ font-size: 14px;
+ font-weight: bold;
+}
+
+#dialog-title 
+{
+ float: left;
+ font-size: 16px;
+ font-family: 'Roboto', Arial, sans-serif;
+ font-weight: bolder;
+}
+
+#dialog-close
+ {
+ float: right;
+ cursor: pointer;
+ margin: 3px 3px;
+ height: 11px;
+ width: 11px;
+ background: url(../../img/dialog_close.gif) no-repeat
+}
+
+#dialog-content 
+{
+ display: block; 
+ min-height:200px;
+ height:auto !important;
+ height:200px;
+ width: auto !important;
+ width: 377px;
+ padding-left: 8px;
+ color: #666666;
+ font-size: 14px;
+ font-family: 'Roboto', Arial, sans-serif;
+ font-weight: bold;
+}
+
+#dialog-mask 
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ min-height: 100%;
+ width: 100%;
+ background: #000000;
+ opacity: .55;
+ filter: alpha(opacity = 55);
+ z-index: 100;
+}
+
+.error 
+{
+ background: #fff url(../../img/error_bg.jpg) bottom right no-repeat;
+ border: 1px solid #924949;
+ border-top: none
+}
+
+.errorheader
+ {
+ background: url(../../img/error_header.gif) repeat-x;
+ color: #6f2c2c;
+ border: 1px solid #924949;
+ border-bottom: none;
+ width: auto !important;
+ width: 377px;
+}
+
+.warning 
+{
+ background: #fff url(../../img/warning_bg.jpg) bottom right no-repeat;
+ border: 1px solid #c5a524;
+ border-top: none
+}
+
+.warningheader 
+{
+ background: url(../../img/warning_header.gif) repeat-x;
+ color: #957c17;
+ border: 1px solid #c5a524;
+ border-bottom: none
+}
+
+.success
+ {
+ background: #fff url(../../img/success_bg.jpg) bottom right no-repeat;
+ border: 1px solid #60a174;
+ border-top: none
+}
+
+.successheader 
+{
+ background: url(../../img/success_header.gif) repeat-x;
+ color: #3c7f51;
+ border: 1px solid #60a174;
+ border-bottom: none
+}
+
+.prompt
+ {
+ background: #fff url(../../img/prompt_bg.jpg) bottom right no-repeat;
+ border: 1px solid #4f6d81;
+ border-top: none
+}
+
+.promptheader 
+{
+ background: url(../../img/prompt_header.gif) repeat-x;
+ color: #355468;
+ border: 1px solid #4f6d81;
+ border-bottom: none
+}

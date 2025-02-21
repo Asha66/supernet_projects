@@ -1,0 +1,85 @@
+/* Copyright (C) 2020-2030 Supernet Technologies India Private Limited. All rights reserved.
+All material appearing on this repository, folder, sub folder and file(s) (“Content/Code etc”) is protected by copyright laws and is the property of Supernet Technologies India Pvt Ltd. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell, offer it for sale, or use such content to construct any kind of database, you may not alter or remove any copyright or other notice from copies of contents on this file.
+Copying or storing any contents except as provided by Supernet Technologies India Pvt Ltd is expressly prohibited without prior written permission of the Supernet Technologies.
+For permission to use the content, please contact legal@supernet-india.com.
+ */
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.logo-two
+{
+visibility: none;
+}
+@media (max-width: 767px){
+.logo-one
+{
+display: none;
+}
+.logo-two
+{
+visibility: visible;
+}
+}
+.listcontent {
+                      margin-left:93px;
+                      border:none;
+                      border: 1px solid silver;border-radius:10px;
+                      box-shadow: 0 0 15px 0 rgba(100, 100, 100, 0.26);
+                      
+                    }
+                    
+                    
+.sidebaranchor{
+  
+  color:#303F9F!important;
+  
+  
+}
+.zoom1 {
+  transition: transform .2s; /* Animation */
+}
+.zoom1:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+}
+.navbar-custom-menu{
+        
+        padding-right: 30px!important;
+}
+.removecaret.dropdown-toggle::after {
+    display: none;
+}
+.sidebarfont{
+  
+  font-size:16px!important;
+}
+.main-sidebar{
+     width:348px!important;
+}
+.content-wrapper{
+  padding-left:0px!important;
+}
+
+  input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.required:after {
+    content: " *";
+    color: red;
+    font-size: large; 
+	padding: 0 5px 0 0;
+	position: absolute; 
+	margin: 0px 0px 0px 5px;  
+}
